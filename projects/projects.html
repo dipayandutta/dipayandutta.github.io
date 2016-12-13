@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="description" content="Example Project 3">
+        <meta name="author" content="Dipayan Dutta">
+        <title>My applications</title>
+        <script type="text/javascript" src="../js/jquery-2.min.js"></script>
+        <script type="text/javascript" src="../js/bootstrap.js"></script>
+        <link rel="stylesheet" href="../css/bootstrap.css">
+        <link rel="stylesheet" href="../index.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Aref+Ruqaa|Arvo|Vollkorn" rel="stylesheet"> 
+       <link rel="stylesheet" href="../font/css/font-awesome.css">
+    </head>
+    <body>
+       <div class="container">
+           
+        <nav class="navbar navbar-inverse navbar-fixed-top navbar-custom">
+            
+                <div class="navbar-header">
+                    <a class="navbar-brand headings"><i class="fa fa-linux fa-lg padding" aria-hidden="true"></i>root@world:~#_</a>
+                </div>
+                <div class="nav navbar-nav navbar-right">
+                    <li class="selected"><a href="../index.html" class="menufont">Who Am I </a></li>
+                    
+                    <li><a href="../linux/package_management.html" class="menufont">Linux</a></li>
+                    <li><a href="../python/platform.html" class="menufont">Python</a></li>
+                    <li><a href="../projects/projects.html" class="menufont">Applications</a></li>
+                </div>
+            </div>
+        </nav>
+        <div class="clearspace"></div>
+        <div class="container">
+            <div class="jumbotron">
+                
+                <h2 class="text jumbheading jmbtext"><i class="fa fa-quote-left"></i>what a computer is to me is the most remarkable tool that we have ever come up with. It is the equivalent of a bicycle for our mind<i class="fa fa-quote-right"></i></h2>
+                <div class="col-md-10"></div>
+                <div class="col-md-2">
+                    <p class="text lead">-Steve Jobs</p>
+                </div>
+           </div>
+        </div>
+        <hr>
+        <div class="container">
+        
+            <div class="col-md-12 ">
+                <h2 class="headings"><u>GUI to show the system informations </u></h2>
+                <h4 class="text"><u>Author : Dipayan Dutta</u></h4>
+                <p class="text">
+                <b class="textbold">Overview:</b>
+                    It is often necessary for the system admin's to get all the system information like uid,gid , diskspace , ram, which Linux , What kind of Distro , What is the version number , what is the name of that version, Kernel Information etc ... So to collect all this information an system admin have run bunch commands and make down all the notes of the command output . 
+
+                </p>
+                <p class="text">
+                    To make the process a bit easier what if there is a only one programm which should be able to collect all the information for you ? and event it will be a GUI (Graphical User interface) so a newbee admin even a newbee linux user also extract the system and system's hardware information . In my openion this will be a good idea . As an implementation of this idea i have created a desktop application hat will give all the system information , a single command that will produce a graphical user interface showing all the system details. 
+                </p>
+                <p class="textbold lead">Goal:</p>
+                <p class="text">
+                    <ul>
+                        <li class="text">As stated in the overview : Create an  application that will give the system details , host name , host id , Disk space , RAM amount , OS name , OS version , Kernel version . etc </li>
+                        <li class="text">Also make it GUI , so it is also usable by newbee's </li>
+                        <li class="text">A single command is capable to display all the information on the window in GUI mode.</li>
+                    </ul>
+                </p>
+                <p class="textbold lead">Technology</p>
+                <p class="text">Code is completely written python language i used <b> python version 2.7.12 </b> build in Ububtu 16.04 and also tested in Fedora 24. With some of the most useful python modules for system admins i.e. <b class="textbold">os module,platform module , grp module , time module , and commands module</b> , And to make the output in a graphical window i used , Tkinter module </p>
+
+                <p class="textbold">Getting Started ...</p>
+                <p class="text">Few examples from the main code </p>
+                <p>
+                <canvas id="canvas_1" width="800" height="80" style="border:1px solid #ed4042"></canvas>
+                <script type="text/javascript">
+                    
+                    var python_canvas = document.getElementById("canvas_1");
+                    var context = python_canvas.getContext("2d");
+                    context.fillStyle = "black";
+                    context.font = "bold 16px Arial";
+                    context.fillText(">>>", 10, 20);
+
+                    var print = python_canvas.getContext("2d");
+                    print.fillStyle = "green"
+                    context.font = "bold 16px Vollkorn"
+                    print.fillText("from",40,20);
+
+                    var module = python_canvas.getContext("2d");
+                    module.fillStyle = "black"
+                    module.font = "bold 16px Vollkorn";
+                    module.fillText("Tkinter",75,20);
+
+                    var print = python_canvas.getContext("2d");
+                    print.fillStyle = "green"
+                    context.font = "bold 16px Vollkorn"
+                    print.fillText("import",130,20);
+
+                     var print = python_canvas.getContext("2d");
+                    print.fillStyle = "green"
+                    context.font = "bold 16px Vollkorn"
+                    print.fillText("*",190,20);
+                    var context = python_canvas.getContext("2d");
+                    context.fillStyle = "black";
+                    context.font = "bold 16px Arial";
+                    context.fillText(">>>", 10, 40);
+
+                    var msg = python_canvas.getContext("2d");
+                    msg.fillStyle = "black"
+                    msg.font = "bold 16px Vollkorn"
+                    msg.fillText("root = ",40,40);
+
+                    
+                    var strmsg = python_canvas.getContext("2d");
+                    strmsg.fillStyle = "black"
+                    strmsg.font = "bold 16px Vollkorn"
+                    strmsg.fillText("Tk()",90,40);
+                    var context = python_canvas.getContext("2d");
+                    context.fillStyle = "black";
+                    context.font = "bold 16px Arial";
+                    context.fillText(">>>", 10, 60);
+
+                    var strmsg = python_canvas.getContext("2d");
+                    strmsg.fillStyle = "black"
+                    strmsg.font = "bold 16px Vollkorn"
+                    strmsg.fillText("root.mainloop()",40,60);
+                    var context = python_canvas.getContext("2d")
+                </script>
+            </p>
+            <p class="text">This  Three line of code is enough to create a graphical window on the screen , Throuh out the application development , i use this Tkinter Library , and its widgets for labeling the output in the display window</p>
+            <p class="text">The main idea of this project is to get the output from several outputs gettting after method calls , and attached them to the display window. </p>
+            <p class="text">First Step is to create a Frame , then pack() it with the window , then create a label , place it in the created frame and then again pack () it , Here is a little part from the main code . </p>
+
+            <p>
+                <canvas id="canvas_2" width="800" height="180" style="border:1px solid #ed4042"></canvas>
+                <script type="text/javascript">
+                   /* 
+                    var prompt = function(x,y,elementID){
+                        var python_canvas = document.getElementById(elementID);
+                    var context = python_canvas.getContext("2d");
+                    context.fillStyle = "black";
+                    context.font = "bold 16px Arial";
+                    context.fillText(">>>", x, y);
+                    }
+                    
+                    var comment = function(x,y,elementID,message){
+                        var python_canvas = document.getElementById(elementID);
+                        var context = python_canvas.getContext("2d");
+                        context.fillStyle = "blue";
+                        context.font = "bold 16px Vollkorn";
+                        context.fillText(message,x,y);
+                    }
+                    prompt(10,20,"canvas_2");
+                    comment(40,20,"canvas_2","#creating a Frame for which will show the system time ");
+                    */
+
+                    var canvas_printer = function(x,y,elementID,type,message){
+                        var python_canvas = document.getElementById(elementID);
+                        var context = python_canvas.getContext("2d");
+                        context.font = "bold 16px Vollkorn";
+
+                        if (type == "prompt"){
+                            context.fillStyle = "black";
+                        }
+                        else if (type == "comment"){
+                            context.fillStyle = "blue"
+                        }
+                        else if (type == "module"){
+                            context.fillStyle = "green";
+                        }
+                        else{
+                            context.fillStyle = "black";
+                        }
+
+                        context.fillText(message,x,y);
+
+                    }
+                    canvas_printer (10,20,"canvas_2","prompt",">>>");
+                    canvas_printer (40,20,"canvas_2","comment","#creating a Frame for which will show the system time");
+                    canvas_printer (10,40,"canvas_2","prompt",">>>");
+                    canvas_printer (40,40,"canvas_2","other","system_time_frame = Frame(self.parent,width=300,height=100) ");
+                    canvas_printer (10,60,"canvas_2","prompt",">>>");
+                    canvas_printer (40,60,"canvas_2","comment","#Now packing this Frame");
+                    canvas_printer (10,80,"canvas_2","prompt",">>>");
+                    canvas_printer (40,80,"canvas_2","other"," system_time_frame.pack()");
+                    canvas_printer (10,100,"canvas_2","prompt",">>>");
+                    canvas_printer (40,100,"canvas_2","comment","#Now create a label");
+                    canvas_printer (10,120,"canvas_2","prompt",">>>");
+                    canvas_printer (40,120,"canvas_2","other","system_time_label = Label(system_time_frame,text=''+str(time.ctime()))");
+                    canvas_printer (10,140,"canvas_2","prompt",">>>");
+                    canvas_printer (40,140,"canvas_2","comment","#Now packing this label");
+                    canvas_printer (10,160,"canvas_2","prompt",">>>");
+                    canvas_printer (40,160,"canvas_2","other"," system_time_label.pack()");
+                    /*
+                    var print = python_canvas.getContext("2d");
+                    print.fillStyle = "blue"
+                    context.font = "bold 16px Vollkorn"
+                    print.fillText("#creating a Frame for which will show the system time",40,20);
+                    */
+                    
+                </script>
+            </p>
+
+            <p class="text"> Here i fetched the system time using the time module , created a frame , and on the label the output is attached , which is the packed to the Frame . Similarly if you go through the full code you will get the total idea of this application . </p>
+             <hr>
+            <p class="textbold lead">This is the output window of the code </p>
+            <p>
+                
+                <img src="images/system_output.png"/>
+            </p>
+            <hr>
+            <p class="text"><span class="note">&#9733;</span>&nbsp;&nbsp;Please make sure that the Tkinter package for python 2.7 is already installed in your system. For Fedora users , before running the python application please run this command <b class="textbold">dnf install python-tools</b> this will install Tkinter module in your local system This will also include the <i>idle</i> in your system .</p>
+            <p class="textbold"><span class="note">&#9733;</span>&nbsp;&nbsp;Full working code can be download or forked from <a href="https://github.com/dipayandutta/Code-For-System-Admins/blob/master/GUI_system_Details.py">my Github Repository</a></p>
+            </div>
+            
+        </div>
+        
+        <!--
+        <div class="container">
+            <p class="lead">pagination Example </p>
+        </div>
+        <div class="container">
+            <ul class="pagination">
+                <li><a href="#">&laquo;</a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li class="disable"><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">&raquo;</a></li>
+            </ul>
+        </div>
+    -->
+        <hr>
+        <div class="container">
+           
+            <ul class="pager">
+                <li class="previous"><a href="#">&larr;Older</a></li>
+                <li class="next disabled"><a href="#">&rarr;Newer</a></li>
+            </ul>
+        </div>
+        <hr>
+        <hr>
+        <!-- footer -->
+        <footer class="text-center">
+            <div class="footer-above">
+                <div class="container">
+                    <div class="row">
+                        <div class="footer-col col-md-4">
+                            <h3 class="headings"> Contact </h3>
+                            <p class="lead">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                inbox.dipayan@gmail.com
+                            </p>
+                            <p><i class="fa fa-mobile fa-2x" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;9748459031</p>
+                        </div>
+                        <div class="footer-col col-md-4">
+                        
+                        </div>
+                        <div class="footer-col col-md-4">
+                            <h3 class="headings">Web Presence</h3>
+                            <a href="https://github.com/dipayandutta"><i class="fa fa-github fa-3x padding icon" aria-hidden="true"></i></a>
+                            
+                            <a href="https://www.linkedin.com/in/dipayandutta"><i class="fa fa-linkedin-square fa-3x padding icon" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

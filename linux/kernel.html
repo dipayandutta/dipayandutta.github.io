@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="description" content="Example Project 3">
+        <meta name="author" content="Dipayan Dutta">
+        <title>kernel </title>
+        <script type="text/javascript" src="../js/jquery-2.min.js"></script>
+        <script type="text/javascript" src="../js/bootstrap.js"></script>
+        <link rel="stylesheet" href="../css/bootstrap.css">
+        <link rel="stylesheet" href="../index.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Aref+Ruqaa|Arvo|Vollkorn" rel="stylesheet"> 
+       <link rel="stylesheet" href="../font/css/font-awesome.css">
+    </head>
+    <body>
+       <div class="container">
+           
+        <nav class="navbar navbar-inverse navbar-fixed-top navbar-custom">
+            
+                <div class="navbar-header">
+                    <a class="navbar-brand headings"><i class="fa fa-linux fa-lg padding" aria-hidden="true"></i>root@world:~#_</a>
+                </div>
+                <div class="nav navbar-nav navbar-right">
+                    <li class="selected"><a href="../index.html" class="menufont">Who Am I </a></li>
+                    
+                    <li><a href="../linux/package_management.html" class="menufont">Linux</a></li>
+                    <li><a href="../python/platform.html" class="menufont">Python</a></li>
+                    <li><a href="../projects/projects.html" class="menufont">applications</a></li>
+                </div>
+            </div>
+        </nav>
+        <div class="clearspace"></div>
+        <div class="container">
+            <div class="jumbotron">
+                
+                <h2 class="text jumbheading jmbtext"><i class="fa fa-quote-left"></i>what a computer is to me is the most remarkable tool that we have ever come up with. It is the equivalent of a bicycle for our mind<i class="fa fa-quote-right"></i></h2>
+                <div class="col-md-10"></div>
+                <div class="col-md-2">
+                    <p class="text lead">-Steve Jobs</p>
+                </div>
+           </div>
+        </div>
+        <hr>
+        <div class="container">
+        
+            <div class="col-md-12">
+                <h2 class="headings"><u>noteable topics | part - i</u></h2>
+                <p class="text"><u>Author - Dipayan Dutta | 07-12-2016</u></p>
+                <p class="textbold">What is a Kernel?</p>
+                <p class="text">A Kernel can be considerd as the heart of the Operating System (OS). </p>
+                <p class="text">Kernel are mainly two types 
+                <ul>
+                    <li class="text">Monolithic Kernel</li>
+                    <li class="text">Microkernel</li>
+                </ul>
+                </p>
+            <p class="text">
+                Microkernels are not implemented as a single large process , Instead the functionallity of the kernel is broken down into separate processes , usually called servers . only the servers absolutley requiring such such capabilities run in privilaged execution mode , rest in the user-space mode . An inter-process communication mechanisim is built into the system , and the various servers are communicate with and invoke "services" from each other by sending messages over the IPC mechanism . Becuase the IPC mechanism involves quite a bit more overhead than a trival function call , however and because a context switch from kernel-space to user-space or vice-verse is often involved , message passing includes a latency and throughput . All prcatical micro-kernel based systems place most or all the servers in the kernel-space , to remove the overhead of frequent context switching and potentially involves direct function invocation . 
+            </p>
+            <p class="text">Example of Microkernels are - Microsoft and Macintosh</p>
+            <p class="text"><b>linux uses a Monolithic kernel</b>&nbsp;i.e. the linux kernel executes in a single address space entirely in kernel mode . Linux , however , borrows much of the good of the microkernels : Linux boasts a modular design and  the capability to preempt iteslf (called kernel preemption), support for kernel threads , and the capabilty to dynamically load separate binaries into kernel image . </p>
+            </div>
+            <p class="text"><span class="note">&#9733;</span>&nbsp;&nbsp;some propertis of the linux kernel
+        <ul>
+            <li class="text">Linux supports the dynamic loading of kernel modules . Although linux kernel is monolithic it can dynamically load and unload kernel modules</li>
+            <li class="text">Linux has symmetrical multiprocess(SMP) support . Which unix don't have.</li>
+            <li class="text">Linux provides an Object Oriented Device Model with device classes , hot plugable events and a user-space device filesystem (sysfs)</li>
+            <li class="text">When any user-specific application attempts an illegal memory access , kernel can trap the error , send the SIGSEGV signal , and kill the process . </li>
+        </ul>
+        </p>
+        <p class="textbold">What is a process ?</p>
+        <p class="text">A process canbe considered as an instance of a running program . A program itself is not a process , a process is an active program and a related resources.In Linux a process is create using fork() system call , which is actually an implementation of clone() system call . The kernel stores the list of process in a circular double link list called task list. 
+        Each element in the task list is a process descriptor of the type struct task_struct , and it is defined in <b class="textbold"> "linux/sched.h" header file </b>.The process descriptor contains the data theat describes the executing program - open files ,  the process address space , pending signals , the process states , and much more .</p>
+        <p class="text"><span class="note">&#9733;</span>&nbsp;&nbsp;<b clss="textbold"> PID </b>: The PID or the Process Identifiers are an unique numbers which denotes as a job id or the process id .i.e. The system identifies the process by a unique process identifier / identification value which is known as PID . The PID is a numerical value represented by the opaque type pid_t which is int data type. The maximum default value of the PID is 32768 . This max value can be changed by the editing the file <b class="textbold">/proc/sys/kernel/pid_max </b></p>
+        <p class="text"><span class="note">&#9733;</span>&nbsp;&nbsp;<b class="textbold">How unix creates process ?</b>Unix takes an unusall step or approach to create a process using fork() and exec() . The first fork() creates a child process that is a copy of the current task . It diffrees from the parent only from it's PID . The second function is exec() which loads a new executable into the new address space and begins executing it .Traditionally , upon fork() , all resources owned by the parent are duplicated and copy is given to the child . In linux fork() is implemented through the use of copy-on-write pages.</p>
+
+        <p class="text"><span class="note">&#9733;</span>&nbsp;&nbsp;<b class="textbold">Copy-On-Write (COW):</b>Copy on Write (COW) - it is a technique to delay or altogether prevent copying of the data . Rather than duplicate the process address space , the parent and child can share a single copy . The data , however is marked in such a way that if it is written to , a duplicate and each process receives a unique copy . Consequently the duplication of resource occurs only when they are written ; until then , they are shared read - only . I recent vulnerabilty known as <b class="textbold">Dirty COW</b> has been introduced with which a normal user are able to get the root privilage . So the Copy-On-Write has an vulnerabilty in its operation process . </p>
+
+        <p class="text"><span class="note">&#9733;</span>&nbsp;&nbsp;<b class="textbold">A little difference between fork() and vfork()</b>Linux implements fork() via the clone() system call . this call take a number of flags . The bulk of the work in forking is handled by do_fork() , which is located in kernel/fork.c . The function calls the copy_process() and then starts the process running . The vfork() system call has the same effect as fork() system call ,except that the page table entries of the parent process are not copied , Instead the child executes as the sole thread in the parent address space , and the parent is blocked until the child call exec() or exit's </p>
+        <p class="text"><span class="note">&#9733;</span>&nbsp;&nbsp;<b class="textbold">Process Schedular</b>&nbsp; Process Schedular is a kernel subsystem that puts the process to work . The process scheduler decides which process runs , when , and for how long . THe process schedular divides the finite resources of processor time between the runnable process on a system. The schedular is the basis of a multitasking Operating system , such as Linux .By deciding which process should run next , the schedular is responsible for best utilizing the system and giving user the imporession that multiple processes are executing simultaneously .</p>
+
+        <p class="text"><span class="note">&#9733;</span>&nbsp;&nbsp;<b class="textbold">Multitasking : </b>&nbsp; This is a property of the operating system to perform multiple tasks simultaneously . Multitasking can be classified into two types 
+            <ul>
+                <li class="text">co-operative Multitasking</li>
+                <li class="text">Preemptive Multitasking</li>
+            </ul>
+        </p>
+        <p class="text">
+        <b class="textbold">co-operative multitasking</b>: A process does not stop running until it voluntary decides to do so . The act of process voluntarily suspending itself is called yeilding.  The short comming of this approach are manifest : The scheduler cannot make global decision regarding how long processes run ; processes can monopolize the processor for longer than the user desires; and a hung process that never yields can potentially bring down the entire system. 
+    </p>
+        <p class="text">
+        <b class="text">preemptive multitasking</b>: In preemptive multitasking , the schedulaer decides when a process is to cease running and a new process it to begin running. 
+
+        <b class="textbold">Linux uses preemptive multitasking.</b>
+        </p>
+        <p class="text"><span class="note">&#9733;</span>&nbsp;&nbsp;<b class="textbold">Process Priority</b>
+            Process with the same priroty are scheduled round-robin.
+
+            The linux kernel implements two separate priority ranges . The First is the nice value a number form -20 to +19 with a default of 0. Process with lower nice value receives a larger proportion of the system's processor compared to processes with a higher nice value , i.e. Lower nice value higher priority , and higher nice value lower priority .
+            The second range is the real-time priority . THe values are configurable , but by default range from 0 to 99 . Higher real-time priority values corresponds to a greater priority.
+
+
+        </p>
+        <p class="textbold">To see the process and their respective nice values use 
+            <b class="textbold command">&nbsp;&nbsp;#ps -el </b>
+        </p>
+         <p class="text"><span class="note">&#9733;</span>&nbsp;&nbsp;<b class="textbold">System Calls</b>System calls provide a layer between the hardware and user-space process. The primary purpose of the system call are 
+            <ul>
+                <li class="text">It provides an abstract hardware interface with the user-space</li>
+                <li class="text">System call ensure system security and stability. with the kernel acting as a middle man between system resource and user space.</li>
+            </ul>
+         </p>
+        <hr>
+        <hr>
+        <hr>
+        <p class="text">Source of this note : Linux Kernel Development by Robert Love</p>
+        </div>
+      
+        <!--
+        <div class="container">
+            <p class="lead">pagination Example </p>
+        </div>
+        <div class="container">
+            <ul class="pagination">
+                <li><a href="#">&laquo;</a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li class="disable"><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">&raquo;</a></li>
+            </ul>
+        </div>
+-->
+        <div class="container">
+           
+            <ul class="pager">
+                <li class="previous disabled"><a href="#">&larr;Older</a></li>
+                <li class="next "><a href="package_management.html">&rarr;Newer</a></li>
+            </ul>
+        </div>
+        <hr>
+        <!-- footer -->
+        <footer class="text-center">
+            <div class="footer-above">
+                <div class="container">
+                    <div class="row">
+                        <div class="footer-col col-md-6">
+                            <h3 class="headings"> Contact </h3>
+                            <p class="lead">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                inbox.dipayan@gmail.com
+                            </p>
+                            <p><i class="fa fa-mobile fa-2x" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;9748459031</p>
+                        </div>
+                        <div class="footer-col col-md-6">
+                            <h3 class="headings">Web Presence</h3>
+                            <a href="https://github.com/dipayandutta"><i class="fa fa-github fa-3x padding icon" aria-hidden="true"></i></a>
+                            
+                            <a href="https://www.linkedin.com/in/dipayandutta"><i class="fa fa-linkedin-square fa-3x padding icon" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

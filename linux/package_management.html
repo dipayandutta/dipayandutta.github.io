@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="description" content="Example Project 3">
+        <meta name="author" content="Dipayan Dutta">
+        <title>package managment</title>
+        <script type="text/javascript" src="../js/jquery-2.min.js"></script>
+        <script type="text/javascript" src="../js/bootstrap.js"></script>
+        <link rel="stylesheet" href="../css/bootstrap.css">
+        <link rel="stylesheet" href="../index.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Aref+Ruqaa|Arvo|Vollkorn" rel="stylesheet"> 
+       <link rel="stylesheet" href="../font/css/font-awesome.css">
+    </head>
+    <body>
+       <div class="container">
+           
+        <nav class="navbar navbar-inverse navbar-fixed-top navbar-custom">
+            
+                <div class="navbar-header">
+                    <a class="navbar-brand headings"><i class="fa fa-linux fa-lg padding" aria-hidden="true"></i>root@world:~#_</a>
+                </div>
+                <div class="nav navbar-nav navbar-right">
+                    <li class="selected"><a href="../index.html" class="menufont">Who Am I </a></li>
+                    
+                    <li><a href="linux.html" class="menufont">Linux</a></li>
+                    <li><a href="../python/platform.html" class="menufont">Python</a></li>
+                    <li><a href="projects/projects.html" class="menufont">applications</a></li>
+                </div>
+            </div>
+        </nav>
+        <div class="clearspace"></div>
+        <div class="container">
+            <div class="jumbotron">
+                
+                <h2 class="text jumbheading jmbtext"><i class="fa fa-quote-left"></i>what a computer is to me is the most remarkable tool that we have ever come up with. It is the equivalent of a bicycle for our mind<i class="fa fa-quote-right"></i></h2>
+                <div class="col-md-10"></div>
+                <div class="col-md-2">
+                    <p class="text lead">-Steve Jobs</p>
+                </div>
+           </div>
+        </div>
+        <hr>
+        <!--Blog One Starts here-->
+        <div class="container">
+        
+            <div class="col-md-12 ">
+                <h2 class="headings"><u>yum vs dnf and also apt-get</u></h2>
+                <p class="text"><u>Author:Dipayan Dutta | 06-12-2016</u></p>
+                <p class="text">Here i am discussing the package managment command for two most widely used and popular linux distro's One is Redhat and other is Debian , althoug <b>Arch which supports pacman</b> will be also discussed later , other distro's supports other package managment tools But yum and apt-get this two are most common in linux package managment field.yum <b class="textbold">Yellowdog updated Modified </b>, it is the package manager for the rpm based distribution such as Redhat , fedora , centos , yum was also a default package manager for fedora still version 17 and centos (which is currently 7 and running with yum). From Fedora 18 <b>dnf (Dandified Yum)</b> was introduced . As fedora release by redhat half-yearly the change was made earlier here. And it was a clear indication of that redhat will incorporate the <b>dnf</b> command very soon.</p>
+                <p class="text">So  what is dnf ?</p> 
+                <p class="text">The command so called dnf or <b class="textbold">Dandified Yellowdog updated Modified</b> is the successor of the command yum . 
+                DNF's own solution uses SUSE's <b class="boldtext">libsolv</b> , It also uses hawkey as a c and python wrapper.libsolv employees a very solid algorithm for package resolving . This dnf command is also capable of effective represntation of the packaging data in memory . It uses automatic synchronisation of metadata with repositories</p>
+                <p class="text"><span class="note">&#9733;</span><b>hawkey</b>It is a package managment library built on the top of libsolv , It is a library allowing clients to query and resolve dependencies of RPM pacjages based on the current state of redhathat package manager database and yum repositories. </p>
+                <p class="text">Sometimes it is a ovious question is that <b class="textbold">Why RPM?</b>because with .tar file any one can install a packages easily . In answer yes it is true any package can be installed , but the package managment process will be slightly difficult . While installing from a .tar file first you have to untar it for this one must tp have good control on the tar command , after unpacking it we have to reslove it dependencies , some times which is really difficult [at last i found it difficult to resplve dependencies manually] . If you are able to fullfil all the installation requirement then you are ready to install the package . But in case of yum command you have to install one simple command <b class="textbold">yum install package-name</b> and that's all yum will automatically search and install the dependencies along with the package.And like the installation process the uninstallation process will also easy . And one of the best part is that it will store the package insformation </p>
+                <p class="text">So The <b>Advantages</b> of RPM installation over .tar installation are </p>
+                
+                <p>
+                    <ul>
+                        <li class="text">No Manuall dependecy resolvence , yum look take care of every thing</li>
+                        <li class="text">Similar to installation , uninstallation process is also easy.</li>
+                        <li class="text">Installed package database can be viewed , example <b>rpm -qi httpd</b>.</li>
+                    </ul>
+                </p>
+                <p class="text"><b><span class="note padding">&#9733;</span>Configuration file for yum repo</b>&nbsp;&nbsp;/etc/yum/yum.repos.d/repofilename.repo</p>
+                <p class="text"><u>Some Essential yum commands</u></p>
+                <div class="row">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th class="text">COMMAND</th>
+                                <th class="text">DESCRIPTTION</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="command">yum update</td>
+                                <td class="text">This will download and install critical and non-critical updates </td>
+                            </tr>
+                            <tr>
+                                <td class="command">yum install httpd</td>
+                                <td class="text">This command will install package httpd (which is Apache http server)</td>
+                            </tr>
+                            <tr>
+                                <td class="command">yum groupinstall mariadb</td>
+                                <td class="text">This command will installed all packages in mariadb(selected) group</td>
+                            </tr>
+                            <tr>
+                                <td class="command">yum info httpd</td>
+                                <td class="text">This command will display the information about the httpd pacakage</td>
+                            </tr>
+                            <tr>
+                                <td class="command">yum groupinfo mariadb</td>
+                                <td class="text">This command will displayed the group information.</td>
+                            </tr>
+                            <tr>
+                                <td class="command">yum list available</td>
+                                <td class="text">This command will list all availabel packages</td>
+                            </tr>
+                            <tr>
+                                <td class="command">yum list installed</td>
+                                <td class="text">This command will list all installed packages</td>
+                            </tr>
+                            <tr>
+                                <td class="command">yum search httpd</td>
+                                <td class="text">This command will search for the httpd package</td>
+                            </tr>
+                            <tr>
+                                <td class="command">yum remove httpd</td>
+                                <td class="text">This command will uninstall the httpd package</td>
+                            </tr>
+                            <tr>
+                                <td class="command">yum reinstall httpd</td>
+                                <td class="text">This command will reinstall the httpd package</td>
+                            </tr>
+                            <tr>
+                                <td class="command">yum localinstall package-name.rpm</td>
+                                <td class="text">This command will locally install the rpm package</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="paraheading text">Now for dnf <b>just replace the yum part with dnf , it will work</b></p>
+                    <p class="text">example:- <i class="command">yum info kernel</i> to convert it in dnf use <i class="command">dnf info kernel</i></p>
+                </div>
+            </div>
+            <p class="textbold">Now What is apt?</p>
+        <p class="text">apt stands for <b class="textbold">Advance Package Tool </b> provides highlevel commandline interface package managment system for debian distro linux like <b>UBUNTU</b>. This command will take help of the more specified apt tools <i class="command">apt-get.</i></p>
+        <p class="textbold">What is apt-get?</p>
+        <p class="text">It is the package handling utility of APT , i.e. it is command line tool for handleing packages . The apt-get command is similar to the command yum or dnf . In some cases apt-get is bit more efficient . </p>
+        <div class="row">
+            <p class="text"><span class="note padding">&#9733;</span><u>Some of the most frequently used apt-get commands</u></p>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th class="text">COMMAND</th>
+                        <th class="text">DESCRIPTION</th>
+                    </tr>
+                    
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="command">apt-get update</td>
+                        <td class="text">This will download and install critical and non-critical updates</td>
+                    </tr>
+                    <tr>
+                        <td class="command">apt-get upgrade</td>
+                        <td class="text">This command is useful for major system upgrades</td>
+                    </tr>
+                    <tr>
+                        <td class="command">apt-get install pip</td>
+                        <td class="text">This command will download and install a package called pip</td>
+                    </tr>
+                    <tr>
+                        <td class="command">apt-get remove pip</td>
+                        <td class="text">This command will remove installed package called pip</td>
+                    </tr>
+                    <tr>
+                        <td class="command">apt-get purge pip</td>
+                        <td class="text">This command will uninstall the packages and also the configuration files will be deleted </td>
+                    </tr>
+                    <tr>
+                        <td class="command">apt-get check</td>
+                        <td class="text">This command will check for the broken packages</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        </div>
+    <!--Blog One Ends Here -->
+        <hr>
+    <!--Blog Two rpm command starts here -->
+    <div class="container">
+        <div class="col-md-12">
+            <h2 class="headings"><u>rpm and dpkg command's for package managment</u></h2>
+            <p class="text"><u>Author:Dipayan Dutta | 07-12-2016</u></p>
+            <p class ="text">RPM is the rpm (Redhat Package Manger) command [rpm command work on redhat , fedora , centos but in debian you can install and run rpm command ] ,which  can be used to build, install, query, verify, update, and erase individual software packages. this is a very useful utility , unlike the yum or dnf command it doesnot read the .repo file , insetead it works on the rpm files directly . This is command is useful for <b class="textbold">pakcage query , package installation , package uninstallation and also getting the dependcy information of the packages .</b>. RPM file list store in /var/lib/rpm .</p>
+            <p class="textbold">What is a package ?</p>
+            <p class="text">A package is a collection of files and meta-data which is use to install or unistall archive files. </p>
+            <p class="text"><span class="note padding">&#9733;</span>Some of the most useful arguments of the <b class="command">rpm</b> command </p>
+            <p>
+            <div class="row">
+                <table class="table table-striped">
+                    <thead>
+                        <th class="text">ARGUMENTS</th>
+                        <th class="text">DESCRIPTION</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="command">-i</td>
+                            <td class="text">installation of the package</td>
+                        </tr>
+                        <tr>
+                            <td class="command">-v</td>
+                            <td class="text">prints the verberose information</td>
+                        </tr>
+                        <tr>
+                            <td class="command">-h</td>
+                            <td class="text">prints the hash marks of the packets</td>
+                        </tr>
+                        <tr>
+                            <td class="command">--nodeps</td>
+                            <td class="text">donot do a dependecy checkup</td>
+                        </tr>
+                        <tr>
+                            <td class="command">-e</td>
+                            <td class="text">earase i.e. unistall a package</td>
+                        </tr>
+                        <tr>
+                            <td class="command">-q</td>
+                            <td class="text">This is the rpm query argument i.e. get the infos</td>
+                        </tr>
+                        <tr>
+                            <td class="command">-U</td>
+                            <td class="text">This is the command for upgradeing a installed package</td>
+                        </tr>
+                        <tr>
+                            <td class="command">-V</td>
+                            <td class="text">Verify packages</td>
+                        </tr>
+                        <tr>
+                            <td class="command">--reinstall</td>
+                            <td class="text">Reinstall the package</td>
+                        </tr>
+                        <tr>
+                            <td class="command">--version</td>
+                            <td class="text">Gives the version information</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            </p>
+        <p class="text"><span class="note padding">&#9733;</span>Some Examples of <b class="command">rpm </b>command</p>
+        
+        <table class="table table-striped">
+            <thead>
+                <th class="text">COMMANDS</th>
+                <th class="text">DESCRIPTION</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="command">rpm -ivh 2hash-0.2-1.el6.rf.i686.rpm</td>
+                    <td class="text">This command is used for installing 2hash package</td>
+                </tr>
+                <tr>
+                    <td class="command">rpm -q 2hash-0.2-1.el6.rf.i686.rpm</td>
+                    <td class="text">This command will check if the package is installed or not</td>
+                </tr>
+                <tr>
+                    <td class="command">rpm -qpR 2hash-0.2-1.el6.rf.i686.rpm</td>
+                    <td class="text">This will give the information about the dependencies for installing the package</td>
+                </tr>
+                <tr>
+                    <td class="command">rpm --nodeps -ivh 2hash-0.2-1.el6.rf.i686.rpm</td>
+                    <td class="text">This is will install the package with out any dependencies</td>
+                </tr>
+                <tr>
+                    <td class="command">rpm -e --allmatches --nodeps 2hash-0.2-1.el6.rf.i686.rpm</td>
+                    <td class="text">This command will unistall the package</td>
+                </tr>
+                <tr>
+                    <td class="command">rpm -qa</td>
+                    <td class="text">Query all installed packages</td>
+                </tr>
+                <tr>
+                    <td class="command"> rpm -U 2hash-0.2-1.el6.rf.i686.rpm</td>
+                    <td class="text">This command will upgrade the installed package</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="text">dpkg , the package managment command for Debian Distros i.e. install , remove , update , manage the packages .The dpkg command works same as the rpm command , unlike the rpm command works on the .rpm files it works on <b>.deb</b> files.</p>
+        <p class="text"><span class="note padding">&#9733;</span>dpkg will keep track of the installed packages in <b class="textbold"> /var/lib/dpkg/available</b> and the dpkg configuration file is present in <b class="textbold"> /etc/dpkg/dpkg.cfg </b> . To check the status of the available configuration files <b class="textbold">/var/lib/dpkg/status</b> .</p>
+        <p class="text"><span class="note padding">&#9733;</span>Some most useful command arguments </p>
+        <table class="table table-striped">
+            <thead>
+                <th class="text">ARGUMENTS</th>
+                <th class="text">DESCRIPTION</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="command">-i</td>
+                    <td class="text">install a .deb file</td>
+                </tr>
+                <tr>
+                    <td class="command">-r</td>
+                    <td class="text">removes an installed package , donot remove configuration files</td>
+                </tr>
+                <tr>
+                    <td class="command">--purge</td>
+                    <td class="text">purge an installed or removed package , also remove the configuration files .</td>
+                </tr>
+                <tr>
+                    <td class="command">--verify</td>
+                    <td class="text">Verify the integrity of the package</td>
+                </tr>
+                <tr>
+                    <td class="command">-list</td>
+                    <td class="text">list all the installed packages</td>
+                </tr>
+                <tr>
+                    <td class="command">-R</td>
+                    <td class="text">Recursively install all the files matching <b>*.deb</b> in a directory</td>
+                </tr>
+                <tr>
+                    <td class="command">--print-avail</td>
+                    <td class="text">Display the detail information on the package name</td>
+                </tr>
+                
+            </tbody>
+        </table>
+        <p class="text">Some useful commands for .deb installation</p>
+        <table class="table table-striped">
+            <thead>
+                <th class="text">COMMANDS</th>
+                <th class="text">DESCRIPTION</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="command">dpkg -i package-name.deb</td>
+                    <td class="text">command is use to install a package</td>
+                </tr>
+                <tr>
+                    <td class="command">dpkg -r package-name.deb</td>
+                    <td class="text">command is use to unistall a package</td>
+                </tr>
+                <tr>
+                    <td class="command">dpkg --purge pcakage-name.deb</td>
+                    <td class="text">command is use to purge remove a file , removes all config files</td>
+                </tr>
+                <tr>
+                    <td class="command">dpkg -list</td>
+                    <td class="text">list all available packages</td>
+                </tr>
+                <tr>
+                    <td class="command">dpkg -R directory-name</td>
+                    <td class="text">install all *.deb files present in the diretory</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        
+    </div>
+        <!--
+        <div class="container">
+            <p class="lead">pagination Example </p>
+        </div>
+        <div class="container">
+            <ul class="pagination">
+                <li><a href="#">&laquo;</a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li class="disable"><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">&raquo;</a></li>
+            </ul>
+        </div>
+        -->
+        <hr>
+        <div class="container">
+            
+            <ul class="pager">
+                <li class="previous disabled text pagger"><a href="#">&larr;Newer</a></li>
+                <li class="next  text"><a href="kernel.html">&rarr;Older</a></li>
+            </ul>
+        </div>
+        
+        <!-- footer -->
+       <footer class="text-center">
+            <div class="footer-above">
+                <div class="container">
+                    <div class="row">
+                        <div class="footer-col col-md-4">
+                            <h3 class="headings"> Contact </h3>
+                            <p class="lead">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                inbox.dipayan@gmail.com
+                            </p>
+                            <p><i class="fa fa-mobile fa-2x" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;9748459031</p>
+                        </div>
+                        <div class="footer-col col-md-4">
+                        
+                        </div>
+                        <div class="footer-col col-md-4">
+                            <h3 class="headings">Web Presence</h3>
+                            <a href="https://github.com/dipayandutta"><i class="fa fa-github fa-3x padding icon" aria-hidden="true"></i></a>
+                            
+                            <a href="https://www.linkedin.com/in/dipayandutta"><i class="fa fa-linkedin-square fa-3x padding icon" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

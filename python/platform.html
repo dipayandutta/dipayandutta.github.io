@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="description" content="Example Project 3">
+        <meta name="author" content="Dipayan Dutta">
+        <title>platform module</title>
+        <script type="text/javascript" src="../js/jquery-2.min.js"></script>
+        <script type="text/javascript" src="../js/bootstrap.js"></script>
+        <link rel="stylesheet" href="../css/bootstrap.css">
+        <link rel="stylesheet" href="../index.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Aref+Ruqaa|Arvo|Vollkorn" rel="stylesheet">
+       <link rel="stylesheet" href="../font/css/font-awesome.css">
+    </head>
+    <body>
+       <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-fixed-top navbar-custom">
+
+                <div class="navbar-header">
+                    <a class="navbar-brand headings"><i class="fa fa-linux fa-lg padding" aria-hidden="true"></i>root@world:~#_</a>
+                </div>
+                <div class="nav navbar-nav navbar-right">
+                    <li class="selected"><a href="../index.html" class="menufont">Who Am I </a></li>
+
+                    <li><a href="../linux/package_management.html" class="menufont">Linux</a></li>
+                    <li><a href="python.html" class="menufont">Python</a></li>
+                    <li><a href="../projects/projects.html" class="menufont">applications</a></li>
+                </div>
+            </div>
+        </nav>
+        <div class="clearspace"></div>
+        <div class="container">
+            <div class="jumbotron">
+                
+                <h2 class="text jumbheading jmbtext"><i class="fa fa-quote-left"></i>what a computer is to me is the most remarkable tool that we have ever come up with. It is the equivalent of a bicycle for our mind<i class="fa fa-quote-right"></i></h2>
+                <div class="col-md-10"></div>
+                <div class="col-md-2">
+                    <p class="text lead">-Steve Jobs</p>
+                </div>
+           </div>
+        </div>
+        <hr>
+        <div class="container">
+
+            <div class="col-md-8 ">
+                <h2 class="headings"><u>the platform module | import platform</u></h2>
+                <p class="text">Author : Dipayan Dutta | 13 Dec 2016 </p>
+            </div>
+
+        </div>
+        <div class="container">
+            <p class="lead text">From the system admin point of view this one of the most important module , this module is emmensely useful to get the information about the underlying system, this module works on Linux , mac , windows . Here i am demonstrating the use and operations in the linux machine. </p>
+            <p class="textbold">Most Frequently used platform  methods in python </p>
+            <p class="text">First of all lets import platform module</p>
+            <p class="text"><b class="pykeywords"><b class="pykeywords">&nbsp;&nbsp;import</b>&nbsp;&nbsp;</b> <b class="text">platform</b></p>
+            <p class="text">
+
+                <table class="table table-striped">
+                    <thead>
+                        <th class="textbold">Methods</th>
+                        <th class="textbold">Application</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="pyfunctions">python_version()</td>
+                            <td class="text">Get the running python version</td>
+                        </tr>
+                        <tr>
+                            <td class="pyfunctions">python_version_tuple()
+                            </td>
+                            <td class="text">Returns a tuple on major , minor and patchlable on python version </td>
+                        </tr>
+                        <tr>
+                            <td class="pyfunctions">uname()</td>
+                            <td class="text">similar as linux uname command</td>
+                        </tr>
+                        <tr>
+                            <td class="pyfunctions">system()</td>
+                            <td class="text">Get the OS type </td>
+                        </tr>
+                        <tr>
+                            <td class="pyfunctions">release()</td>
+                            <td class="text">get the kernel version</td>
+                        </tr>
+                        <tr>
+                            <td class="pyfunctions">platform.node()</td>
+                            <td class="text">get the host name</td>
+                        </tr>
+                        <tr>
+                            <td class="pyfunctions">platform.architecture()</td>
+                            <td class="text">Will show the system architecture , i.e. 64bit or 32 bit</td>
+                        </tr>
+                        <tr>
+                            <td class="pyfunctions">linux_distribution()</td>
+                            <td class="text">Get the details of the linux distributor </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </p>
+            <p class="textbold">As some of the methods returns tuple as an output , we can extract the index for getting more specific informations , some of them are explained below . </p>
+            <p>
+                <canvas id="python_canvas" width="800" height="80" style="border:1px solid #ed4042"></canvas>
+                <script type="text/javascript">
+                    
+                    var python_canvas = document.getElementById("python_canvas");
+                    var context = python_canvas.getContext("2d");
+                    context.fillStyle = "black";
+                    context.font = "bold 16px Arial";
+                    context.fillText(">>>", 10, 20);
+
+                    var print = python_canvas.getContext("2d");
+                    print.fillStyle = "green"
+                    context.font = "bold 16px Vollkorn"
+                    print.fillText("import",40,20);
+
+                    var module = python_canvas.getContext("2d");
+                    module.fillStyle = "black"
+                    module.font = "bold 16px Vollkorn";
+                    module.fillText("platform",95,20);
+
+                    var context = python_canvas.getContext("2d");
+                    context.fillStyle = "black";
+                    context.font = "bold 16px Arial";
+                    context.fillText(">>>", 10, 40);
+
+                    var msg = python_canvas.getContext("2d");
+                    msg.fillStyle = "green"
+                    msg.font = "bold 16px Vollkorn"
+                    msg.fillText("print",40,40);
+
+                    
+                    var strmsg = python_canvas.getContext("2d");
+                    strmsg.fillStyle = "black"
+                    strmsg.font = "bold 16px Vollkorn"
+                    strmsg.fillText("platform.python_version_tuple()[0]",90,40);
+                    var context = python_canvas.getContext("2d");
+                    context.fillStyle = "black";
+                    context.font = "bold 16px Arial";
+                    context.fillText(">>>", 10, 60);
+
+                    var output = python_canvas.getContext("2d");
+                    output.fillStyle = "blue"
+                    output.font = "bold 16px Vollkorn"
+                    output.fillText("2 #which is the major version",40,60);
+                </script>
+            </p>
+            <p>
+                <canvas id="canvas_2" width="800" height="80" style="border:1px solid #ed4042"></canvas>
+                <script type="text/javascript">
+                    
+                    var python_canvas = document.getElementById("canvas_2");
+                    var context = python_canvas.getContext("2d");
+                    context.fillStyle = "black";
+                    context.font = "bold 16px Arial";
+                    context.fillText(">>>", 10, 20);
+
+                    var print = python_canvas.getContext("2d");
+                    print.fillStyle = "green"
+                    context.font = "bold 16px Vollkorn"
+                    print.fillText("import",40,20);
+
+                    var module = python_canvas.getContext("2d");
+                    module.fillStyle = "black"
+                    module.font = "bold 16px Vollkorn";
+                    module.fillText("platform",95,20);
+
+                    var context = python_canvas.getContext("2d");
+                    context.fillStyle = "black";
+                    context.font = "bold 16px Arial";
+                    context.fillText(">>>", 10, 40);
+
+                    var msg = python_canvas.getContext("2d");
+                    msg.fillStyle = "green"
+                    msg.font = "bold 16px Vollkorn"
+                    msg.fillText("print",40,40);
+
+                    
+                    var strmsg = python_canvas.getContext("2d");
+                    strmsg.fillStyle = "black"
+                    strmsg.font = "bold 16px Vollkorn"
+                    strmsg.fillText("platform.python_version_tuple()[1]",90,40);
+                    var context = python_canvas.getContext("2d");
+                    context.fillStyle = "black";
+                    context.font = "bold 16px Arial";
+                    context.fillText(">>>", 10, 60);
+
+                    var output = python_canvas.getContext("2d");
+                    output.fillStyle = "blue"
+                    output.font = "bold 16px Vollkorn"
+                    output.fillText("7 #which is the minor version",40,60);
+                </script>
+            </p>
+            <p>
+                <canvas id="canvas_3" width="800" height="80" style="border:1px solid #ed4042"></canvas>
+                <script type="text/javascript">
+                    
+                    var python_canvas = document.getElementById("canvas_3");
+                    var context = python_canvas.getContext("2d");
+                    context.fillStyle = "black";
+                    context.font = "bold 16px Arial";
+                    context.fillText(">>>", 10, 20);
+
+                    var print = python_canvas.getContext("2d");
+                    print.fillStyle = "green"
+                    context.font = "bold 16px Vollkorn"
+                    print.fillText("import",40,20);
+
+                    var module = python_canvas.getContext("2d");
+                    module.fillStyle = "black"
+                    module.font = "bold 16px Vollkorn";
+                    module.fillText("platform",95,20);
+
+                    var context = python_canvas.getContext("2d");
+                    context.fillStyle = "black";
+                    context.font = "bold 16px Arial";
+                    context.fillText(">>>", 10, 40);
+
+                    var msg = python_canvas.getContext("2d");
+                    msg.fillStyle = "green"
+                    msg.font = "bold 16px Vollkorn"
+                    msg.fillText("print",40,40);
+
+                    
+                    var strmsg = python_canvas.getContext("2d");
+                    strmsg.fillStyle = "black"
+                    strmsg.font = "bold 16px Vollkorn"
+                    strmsg.fillText("platform.python_version_tuple()[2]",90,40);
+                    var context = python_canvas.getContext("2d");
+                    context.fillStyle = "black";
+                    context.font = "bold 16px Arial";
+                    context.fillText(">>>", 10, 60);
+
+                    var output = python_canvas.getContext("2d");
+                    output.fillStyle = "blue"
+                    output.font = "bold 16px Vollkorn"
+                    output.fillText("12 #which is the patch lable",40,60);
+                </script>
+            </p>
+            <p>
+                <canvas id="canvas_4" width="800" height="80" style="border:1px solid #ed4042"></canvas>
+                <script type="text/javascript">
+                    
+                    var python_canvas = document.getElementById("canvas_4");
+                    var context = python_canvas.getContext("2d");
+                    context.fillStyle = "black";
+                    context.font = "bold 16px Arial";
+                    context.fillText(">>>", 10, 20);
+
+                    var print = python_canvas.getContext("2d");
+                    print.fillStyle = "green"
+                    context.font = "bold 16px Vollkorn"
+                    print.fillText("import",40,20);
+
+                    var module = python_canvas.getContext("2d");
+                    module.fillStyle = "black"
+                    module.font = "bold 16px Vollkorn";
+                    module.fillText("platform",95,20);
+
+                    var context = python_canvas.getContext("2d");
+                    context.fillStyle = "black";
+                    context.font = "bold 16px Arial";
+                    context.fillText(">>>", 10, 40);
+
+                    var msg = python_canvas.getContext("2d");
+                    msg.fillStyle = "green"
+                    msg.font = "bold 16px Vollkorn"
+                    msg.fillText("print",40,40);
+
+                    
+                    var strmsg = python_canvas.getContext("2d");
+                    strmsg.fillStyle = "black"
+                    strmsg.font = "bold 16px Vollkorn"
+                    strmsg.fillText("platform.linux_distribution()[0]",90,40);
+                    var context = python_canvas.getContext("2d");
+                    context.fillStyle = "black";
+                    context.font = "bold 16px Arial";
+                    context.fillText(">>>", 10, 60);
+
+                    var output = python_canvas.getContext("2d");
+                    output.fillStyle = "blue"
+                    output.font = "bold 16px Vollkorn"
+                    output.fillText("Ubuntu",40,60);
+                </script>
+            </p>
+            <p>
+                <canvas id="canvas_5" width="800" height="80" style="border:1px solid #ed4042"></canvas>
+                <script type="text/javascript">
+                    
+                    var python_canvas = document.getElementById("canvas_5");
+                    var context = python_canvas.getContext("2d");
+                    context.fillStyle = "black";
+                    context.font = "bold 16px Arial";
+                    context.fillText(">>>", 10, 20);
+
+                    var print = python_canvas.getContext("2d");
+                    print.fillStyle = "green"
+                    context.font = "bold 16px Vollkorn"
+                    print.fillText("import",40,20);
+
+                    var module = python_canvas.getContext("2d");
+                    module.fillStyle = "black"
+                    module.font = "bold 16px Vollkorn";
+                    module.fillText("platform",95,20);
+
+                    var context = python_canvas.getContext("2d");
+                    context.fillStyle = "black";
+                    context.font = "bold 16px Arial";
+                    context.fillText(">>>", 10, 40);
+
+                    var msg = python_canvas.getContext("2d");
+                    msg.fillStyle = "green"
+                    msg.font = "bold 16px Vollkorn"
+                    msg.fillText("print",40,40);
+
+                    
+                    var strmsg = python_canvas.getContext("2d");
+                    strmsg.fillStyle = "black"
+                    strmsg.font = "bold 16px Vollkorn"
+                    strmsg.fillText("platform.linux_distribution()[1]",90,40);
+                    var context = python_canvas.getContext("2d");
+                    context.fillStyle = "black";
+                    context.font = "bold 16px Arial";
+                    context.fillText(">>>", 10, 60);
+
+                    var output = python_canvas.getContext("2d");
+                    output.fillStyle = "blue"
+                    output.font = "bold 16px Vollkorn"
+                    output.fillText("16.04 #which is the version number",40,60);
+                </script>
+                <p>
+                <canvas id="canvas_6" width="800" height="80" style="border:1px solid #ed4042"></canvas>
+                <script type="text/javascript">
+                    
+                    var python_canvas = document.getElementById("canvas_6");
+                    var context = python_canvas.getContext("2d");
+                    context.fillStyle = "black";
+                    context.font = "bold 16px Arial";
+                    context.fillText(">>>", 10, 20);
+
+                    var print = python_canvas.getContext("2d");
+                    print.fillStyle = "green"
+                    context.font = "bold 16px Vollkorn"
+                    print.fillText("import",40,20);
+
+                    var module = python_canvas.getContext("2d");
+                    module.fillStyle = "black"
+                    module.font = "bold 16px Vollkorn";
+                    module.fillText("platform",95,20);
+
+                    var context = python_canvas.getContext("2d");
+                    context.fillStyle = "black";
+                    context.font = "bold 16px Arial";
+                    context.fillText(">>>", 10, 40);
+
+                    var msg = python_canvas.getContext("2d");
+                    msg.fillStyle = "green"
+                    msg.font = "bold 16px Vollkorn"
+                    msg.fillText("print",40,40);
+
+                    
+                    var strmsg = python_canvas.getContext("2d");
+                    strmsg.fillStyle = "black"
+                    strmsg.font = "bold 16px Vollkorn"
+                    strmsg.fillText("platform.linux_distribution()[2]",90,40);
+                    var context = python_canvas.getContext("2d");
+                    context.fillStyle = "black";
+                    context.font = "bold 16px Arial";
+                    context.fillText(">>>", 10, 60);
+
+                    var output = python_canvas.getContext("2d");
+                    output.fillStyle = "blue"
+                    output.font = "bold 16px Vollkorn"
+                    output.fillText("Xenial",40,60);
+                </script>
+            </p>
+            </p>
+            <p>
+                <canvas id="canvas_7" width="800" height="80" style="border:1px solid #ed4042"></canvas>
+                <script type="text/javascript">
+                    
+                    var python_canvas = document.getElementById("canvas_7");
+                    var context = python_canvas.getContext("2d");
+                    context.fillStyle = "black";
+                    context.font = "bold 16px Arial";
+                    context.fillText(">>>", 10, 20);
+
+                    var print = python_canvas.getContext("2d");
+                    print.fillStyle = "green"
+                    context.font = "bold 16px Vollkorn"
+                    print.fillText("import",40,20);
+
+                    var module = python_canvas.getContext("2d");
+                    module.fillStyle = "black"
+                    module.font = "bold 16px Vollkorn";
+                    module.fillText("platform",95,20);
+
+                    var context = python_canvas.getContext("2d");
+                    context.fillStyle = "black";
+                    context.font = "bold 16px Arial";
+                    context.fillText(">>>", 10, 40);
+
+                    var msg = python_canvas.getContext("2d");
+                    msg.fillStyle = "green"
+                    msg.font = "bold 16px Vollkorn"
+                    msg.fillText("print",40,40);
+
+                    
+                    var strmsg = python_canvas.getContext("2d");
+                    strmsg.fillStyle = "black"
+                    strmsg.font = "bold 16px Vollkorn"
+                    strmsg.fillText("platform.architecture()[0]",90,40);
+                    var context = python_canvas.getContext("2d");
+                    context.fillStyle = "black";
+                    context.font = "bold 16px Arial";
+                    context.fillText(">>>", 10, 60);
+
+                    var output = python_canvas.getContext("2d");
+                    output.fillStyle = "blue"
+                    output.font = "bold 16px Vollkorn"
+                    output.fillText("64bit",40,60);
+                </script>
+            </p>
+            <p>
+                <canvas id="canvas_8" width="800" height="80" style="border:1px solid #ed4042"></canvas>
+                <script type="text/javascript">
+                    
+                    var python_canvas = document.getElementById("canvas_8");
+                    var context = python_canvas.getContext("2d");
+                    context.fillStyle = "black";
+                    context.font = "bold 16px Arial";
+                    context.fillText(">>>", 10, 20);
+
+                    var print = python_canvas.getContext("2d");
+                    print.fillStyle = "green"
+                    context.font = "bold 16px Vollkorn"
+                    print.fillText("import",40,20);
+
+                    var module = python_canvas.getContext("2d");
+                    module.fillStyle = "black"
+                    module.font = "bold 16px Vollkorn";
+                    module.fillText("platform",95,20);
+
+                    var context = python_canvas.getContext("2d");
+                    context.fillStyle = "black";
+                    context.font = "bold 16px Arial";
+                    context.fillText(">>>", 10, 40);
+
+                    var msg = python_canvas.getContext("2d");
+                    msg.fillStyle = "green"
+                    msg.font = "bold 16px Vollkorn"
+                    msg.fillText("print",40,40);
+
+                    
+                    var strmsg = python_canvas.getContext("2d");
+                    strmsg.fillStyle = "black"
+                    strmsg.font = "bold 16px Vollkorn"
+                    strmsg.fillText("platform.uname()[0]",90,40);
+                    var context = python_canvas.getContext("2d");
+                    context.fillStyle = "black";
+                    context.font = "bold 16px Arial";
+                    context.fillText(">>>", 10, 60);
+
+                    var output = python_canvas.getContext("2d");
+                    output.fillStyle = "blue"
+                    output.font = "bold 16px Vollkorn"
+                    output.fillText("Linux",40,60);
+                </script>
+            </p>
+            <p class="textbold"><span class="note">&#9733;</span>&nbsp;&nbsp; Based on the platform module I have create an application which will give the underlying system information . Please go through this code , run on your system and get familer with platform module .You can download the working Full Code of this notes from <a href="https://github.com/dipayandutta/python/blob/master/platform_applications.py"> my github repo.</a></p>
+            
+        </div>
+
+
+        <!--
+        <div class="container">
+            <p class="lead">pagination Example </p>
+        </div>
+        <div class="container">
+            <ul class="pagination">
+                <li><a href="#">&laquo;</a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li class="disable"><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">&raquo;</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <p class="lead">Pager Example</p>
+            <ul class="pager">
+                <li class="previous disabled"><a href="#">&larr;Older</a></li>
+                <li class="next"><a href="#">&rarr;Newer</a></li>
+            </ul>
+        </div>
+        -->
+        <div class="container">
+
+            <ul class="pager">
+                <li class="previous"><a href="python.html">&larr;Older</a></li>
+                <li class="next "><a href="#">&rarr;Newer</a></li>
+            </ul>
+        </div>
+        <hr>
+        <!-- footer -->
+        <footer class="text-center">
+            <div class="footer-above">
+                <div class="container">
+                    <div class="row">
+                        <div class="footer-col col-md-4">
+                            <h3 class="headings"> Contact </h3>
+                            <p class="lead">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                inbox.dipayan@gmail.com
+                            </p>
+                            <p><i class="fa fa-mobile fa-2x" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;9748459031</p>
+                        </div>
+                        <div class="footer-col col-md-4">
+                        
+                        </div>
+                        <div class="footer-col col-md-4">
+                            <h3 class="headings">Web Presence</h3>
+                            <a href="https://github.com/dipayandutta"><i class="fa fa-github fa-3x padding icon" aria-hidden="true"></i></a>
+                            
+                            <a href="https://www.linkedin.com/in/dipayandutta"><i class="fa fa-linkedin-square fa-3x padding icon" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
