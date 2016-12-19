@@ -214,21 +214,136 @@
             
         </div>
         
-        <!--
+        
+        <hr>
         <div class="container">
-            <p class="lead">pagination Example </p>
+            <div class="col-md-12">
+                <h2 class="headings"><u>Count Number of different Files in a directory Shell script application</u></h2>
+                <h4 class="text"><u>Author : Dipayan Dutta</u></h4>
+                <p class="text">
+                <b class="textbold">Overview:</b>
+                    The ls command in the unix or Linux environment gives a very good overview of the files present in the directory , with some arguments of the ls command one can easily get permissions , owner , links etc ... Even with the use of pipe(|) and wc -l command we can count total number of files in the directory . <b class="command">ls | wc -l</b>
+
+                </p>
+                <p class="text">
+                    <b class="textbold">Goal:</b>
+                    Goal of the program is to make a shell script that will count the number of indivual file types based on the file extensions. Let's say i have 2 .c file 3 .py file , 2 .js files etc ... The output should be provided as 
+                </p>
+                <p class="text">
+                    Total C Files = 2<br>
+                    Total python Files = 3 <br>
+                    Total Javascript file = 2 <br>
+                </p>
+                <p class="text"><b class="text">Technology:</b><br>For this application development i use shell scripting . in <b class="textbold">/bin/bash</b> my bash version is <b class="textbold">4.3.46(1)-release</b>
+                <br><span class="note">&#9733;</span>&nbsp;&nbsp;<b class="textbold">NOTE:</b> To get the shell version use the environmental variable i.e. <b class="command">echo $BASH_VERSION</b>
+                </p>
+                <p class="textbold">Lets Check some part of the main code
+                
+                </p>
+
+                <p>
+                    <canvas id="shell" width="800" height="180" style="border:1px solid #ed4042"></canvas>
+                    <script type="text/javascript">
+                    
+                    var canvas_printer = function(x,y,elementID,type,message){
+                        var shell_canvas = document.getElementById(elementID);
+                        var context = shell_canvas.getContext("2d");
+                        context.font = "bold 16px Vollkorn";
+
+                        if (type == "prompt"){
+                            context.fillStyle = "black";
+                        }
+                        else if (type == "comment"){
+                            context.fillStyle = "blue"
+                        }
+                        else if (type == "module"){
+                            context.fillStyle = "green";
+                        }
+                        else if(type == "variable"){
+                            context.fillStyle="green";
+                        }
+                        else{
+                            context.fillStyle = "black";
+                        }
+
+                        context.fillText(message,x,y);
+
+                    }
+                    canvas_printer (10,20,"shell","comment","#variable declearation");
+                    canvas_printer (10,40,"shell","variable","c_count=0");
+                    canvas_printer (10,60,"shell","variable","txt_count=0");
+                    canvas_printer (10,80,"shell","variable","py_count=0");
+                    canvas_printer (10,100,"shell","variable","java_count=0");
+                    canvas_printer (10,120,"shell","variable","doc_count=0");
+                    canvas_printer (10,140,"shell","variable","pdf_count=0");
+                    canvas_printer (10,160,"shell","variable","html_count=0");
+                </script>
+                </p>
+                <p class="text">This are some variables which will work as an incremental counter for getting the total number files types , But first i have to get the file extensions and match with them to the standard file extensions.</p>
+                 <p>
+                    <canvas id="shell_loop" width="800" height="380" style="border:1px solid #ed4042"></canvas>
+                    <script type="text/javascript">
+                    
+                    var canvas_printer = function(x,y,elementID,type,message){
+                        var shell_canvas = document.getElementById(elementID);
+                        var context = shell_canvas.getContext("2d");
+                        context.font = "bold 16px Vollkorn";
+
+                        if (type == "prompt"){
+                            context.fillStyle = "black";
+                        }
+                        else if (type == "comment"){
+                            context.fillStyle = "blue"
+                        }
+                        else if (type == "module"){
+                            context.fillStyle = "green";
+                        }
+                        else if(type == "variable"){
+                            context.fillStyle="green";
+                        }
+                        else if(type == "keywords"){
+                            context.fillStyle = "#ed6b38"
+                        }
+                        else{
+                            context.fillStyle = "black";
+                        }
+
+                        context.fillText(message,x,y);
+
+                    }
+                    canvas_printer (10,20,"shell_loop","comment","#run a loop on the all available files in the current directory");
+                    canvas_printer (10,40,"shell_loop","keywords","for file in $(ls)");
+                    canvas_printer (10,60,"shell_loop","keywords","do");
+                    canvas_printer (30,80,"shell_loop","text","ext=${file#*\.}");
+                    canvas_printer (150,80,"shell_loop","comment","#after looping stroing the extensions of each file in the ext variable");
+                    canvas_printer (30,100,"shell_loop","keywords","case");
+                    canvas_printer (70,100,"shell_loop","text","$ext in");
+                    canvas_printer (147,100,"shell_loop","comment","# using case to check which file type it is ");
+                    canvas_printer (30,120,"shell_loop","text","c)");
+                    canvas_printer (147,120,"shell_loop","comment","# First Checking is the filetype is C ");
+                    canvas_printer (30,140,"shell_loop","variable","c_count=`expr $c_count + 1`;");
+                    canvas_printer (260,143,"shell_loop","comment","#If the extensions is .c then increment the counter");
+                    canvas_printer (30,160,"shell_loop","text",";;");
+                    canvas_printer (30,180,"shell_loop","text","py)");
+                    canvas_printer (30,200,"shell_loop","variable","py_count=`expr $py_count + 1`;)");
+                    canvas_printer (30,220,"shell_loop","text",";;");
+                    canvas_printer (30,240,"shell_loop","text","py)");
+                    canvas_printer (30,260,"shell_loop","variable","sh_count=`expr $sh_count + 1`;)");
+                    canvas_printer (30,280,"shell_loop","text",";;");
+                    canvas_printer(10,320,"shell_loop","comment","#As you can see the same approach is mainted through out the program , loop through all the")
+                    canvas_printer(10,340,"shell_loop","comment","#elements and then check its file extensions increment the counter")
+                </script>
+                </p>
+                <p class="textbold">Sample Output from the script . </p>
+                <hr>
+                <p>
+                    
+                    <img src="images/file_details.png">
+                </p>
+                <p class="textbold"><span class="note">&#9733;</span>&nbsp;&nbsp;Full working code can be download or forked from <a href="https://github.com/dipayandutta/Code-For-System-Admins/blob/master/file_details.sh">my Github Repository</p>
+            </div>
         </div>
-        <div class="container">
-            <ul class="pagination">
-                <li><a href="#">&laquo;</a></li>
-                <li class="active"><a href="#">1</a></li>
-                <li class="disable"><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">&raquo;</a></li>
-            </ul>
-        </div>
-    -->
+        <hr>
         <hr>
         <div class="container">
            
