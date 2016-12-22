@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="description" content="Example Project 3">
+        <meta name="author" content="Dipayan Dutta">
+        <title>numpy module</title>
+        <script type="text/javascript" src="../js/jquery-2.min.js"></script>
+        <script type="text/javascript" src="../js/bootstrap.js"></script>
+        <link rel="stylesheet" href="../css/bootstrap.css">
+        <link rel="stylesheet" href="../index.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Aref+Ruqaa|Arvo|Vollkorn" rel="stylesheet"> 
+       <link rel="stylesheet" href="../font/css/font-awesome.css">
+    </head>
+    <body>
+       <div class="container">
+           
+        <nav class="navbar navbar-inverse navbar-fixed-top navbar-custom">
+            
+                <div class="navbar-header">
+                    <a class="navbar-brand headings"><i class="fa fa-linux fa-lg padding" aria-hidden="true"></i>root@world:~#_</a>
+                </div>
+                <div class="nav navbar-nav navbar-right">
+                    <li class="selected"><a href="../index.html" class="menufont">Who Am I </a></li>
+                    
+                    <li><a href="../linux/package_management.html" class="menufont">Linux</a></li>
+                    <li><a href="numpy.html" class="menufont">Python</a></li>
+                    <li><a href="../projects/projects.html" class="menufont">applications</a></li>
+                </div>
+            </div>
+        </nav>
+        <div class="clearspace"></div>
+        <div class="container">
+            <div class="jumbotron">
+                
+                <h2 class="text jumbheading jmbtext"><i class="fa fa-quote-left"></i>what a computer is to me is the most remarkable tool that we have ever come up with. It is the equivalent of a bicycle for our mind<i class="fa fa-quote-right"></i></h2>
+                <div class="col-md-10"></div>
+                <div class="col-md-2">
+                    <p class="text lead">-Steve Jobs</p>
+                </div>
+           </div>
+        </div>
+        <hr>
+        <div class="container">
+        
+            <div class="col-md-12 ">
+                <h2 class="headings"><u>the numpy module | import numpy</u></h2>
+                <p class="text">Author : Dipayan Dutta | 22 Dec 2016 </p>
+                <p class="text">One of the most important module for datascience enthusiastics . This module contains most fundamental operations to much more complex mathemetical operations which are needed to perform or to compute while solving numeric problems .At the core of the numpy is contains <b class="textbold">ndarry</b> object. his encapsulates n-dimensional arrays of homogeneous data types, with many operations being performed in compiled code for performance.This module is really help full and a neccessity for data-science operations. But for the system admins this module may be not so important , since it is one of the most popular module in the python and also fullfill's the requirement for data science application , I decided to make and share some notes about this module.</p>
+
+                <p class="text"><b class="pykeywords"><b class="pykeywords">&nbsp;&nbsp;import</b>&nbsp;&nbsp;</b> <b class="text">numpy</b> <b class="pykeywords">&nbsp;&nbsp;as</b>&nbsp;&nbsp;</b><b class="text">np</b></p>
+
+                <p class="textbold">Some most frequently used and important methods of numpy </p>
+
+                <p class="text">
+                    <table class="table table-striped">
+                    <thead>
+                        <th class="textbold">Methods</th>
+                        <th class="textbold">Application</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="pyfunctions">n=np.array([1,2,3])</td>
+                            <td class="text">Creates a numpy array</td>
+                        </tr>
+                        <tr>
+                            <td class="pyfunctions">type(n)</td>
+                            <td class="text">numpy.ndarray</td>
+                        </tr>
+                        <tr>
+                            <td class="pyfunctions">n.size</td>
+                            <td class="text">Check the size of the array Here it will display 3</td>
+                        </tr>
+                        <tr>
+                            <td class="pyfunctions">n.shape</td>
+                            <td class="text">Gives the shape of the array Here (3,)</td>
+                        </tr>
+                        <tr>
+                            <td class="pyfunctions">n.ndim</td>
+                            <td class="text">Check the axis of the array</td>
+                        </tr>
+                        <tr>
+                            <td class="pyfunctions">c=np.array([[1,2,3],[4,5,6],[7,8,9]])</td>
+                            <td class="text">This will create a 3x3 array</td>
+                        </tr>
+                        <tr>
+                            <td class="pyfunctions">c=np.array([[1,2,3],[4,5,6]],dtype=complex)</td>
+                            <td class="text"> This will create a 2x2 array of complex numbers</td>
+                        </tr>
+                        <tr>
+                            <td class="pyfunctions">np.zeros((3,3))</td>
+                            <td class="text">This will create z 3x3 all zero matrix</td>
+                        </tr>
+                        <tr>
+                            <td class="pyfunctions">np.eye(4)</td>
+                            <td class="text">To create a 4x4 identity matrix</td>
+                        </tr>
+                        <tr>
+                            <td class="pyfunctions">np.ones((3,3))</td>
+                            <td class="text">To create a 3x3 all ones matrix</td>
+                        </tr>
+                        <tr>
+                            <td class="pyfunctions">np.arange(0,12).reshape(3,4)</td>
+                            <td class="text">To change the shape of matrix , this will change it into 3x4 </td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </p>
+                <p class="textbold">Numpy also gives us to operate some artihmatic operations on the array</p>
+                <p>
+                    <table class="table table-striped">
+                    <thead>
+                        <th class="textbold">Methods</th>
+                        <th class="textbold">Outputs</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="pyfunctions">a = np.arange(4)</td>
+                            <td class="text">array([0, 1, 2, 3])#Creats an array with elements from 0 to 3</td>
+                        </tr>
+                        <tr>
+                            <td class="pyfunctions">a+1</td>
+                            <td class="text">array([1, 2, 3, 4]) #adds each elements of the array with 1 </td>
+                        </tr>
+                        <tr>
+                            <td class="pyfunctions">a*2</td>
+                            <td class="text">array([1, 2, 3, 4])#Result of multiplication of each element of the array </td>
+                        </tr>
+                        <tr>
+                            <td class="pyfunctions">a**2</td>
+                            <td class="text">array([0, 1, 4, 9]) #Square root of each elements in the array</td>
+                        </tr>
+                        <tr>
+                            <td class="pyfunctions">np.sum(a)</td>
+                            <td class="text">6 # iterates over all the elements and produce sum </td>
+                        </tr>
+                        <tr>
+                            <td class="pyfunctions">np.average(a)</td>
+                            <td class="text">1.5 #Calculate the average of items in the array</td>
+                        </tr>
+                        <tr>
+                            <td class="pyfunctions">np.max(a)</td>
+                            <td class="text">3 #Get the maximum value from the array</td>
+                        </tr>
+                        <tr>
+                            <td class="pyfunctions">np.min(a)</td>
+                            <td class="text">0 #Get the minimum value from the array</td>
+                        </tr>
+                        
+                        <tr >
+                            <td class="pyfunctions">np.sqrt(a)</td>
+                            <td class="text">array([ 0.        ,  1.        ,  1.41421356,  1.73205081]) # get the square root of the each item in the array</td>
+                        </tr>
+                        <tr>
+                            <td class="pyfunctions">np.square(a)</td>
+                            <td class="text">array([0, 1, 4, 9]) #To get the square the items in the array</td>
+                        </tr>
+                        <tr>
+                            <td class="pyfunctions">np.log(a)</td>
+                            <td class="text"> array([       -inf,  0.        ,  0.69314718,  1.09861229]) #Get the log value of each item</td>
+                        </tr>
+                        <tr>
+                            <td class="pyfunctions">a.astype(float)</td>
+                            <td class="text">array([ 0.,  1.,  2.,  3.])# This will convert each item of the array into float</td>
+                        </tr>
+                        <tr>
+                            <td class="pyfunctions">np.intersect1d([1,2,3,4],[2,6,7,8])</td>
+                            <td class="text">array([2]) #Gives only the intersecting item from the array</td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </p>
+                <p class="textbold">Sorting and Seraching elements in the ndarray</p>
+                <p class="text"> First Create an unsorted ndarray with few items</p>
+                <p>
+                <canvas id="canvas_2" width="800" height="40" style="border:1px solid #ed4042"></canvas>
+                  <script type="text/javascript">
+                      var canvas_printer = function(x,y,elementID,type,message){
+                        var python_canvas = document.getElementById(elementID);
+                        var context = python_canvas.getContext("2d");
+                        context.font = "bold 16px Vollkorn";
+
+                        if (type == "prompt"){
+                            context.fillStyle = "black";
+                        }
+                        else if (type == "comment"){
+                            context.fillStyle = "blue"
+                        }
+                        else if (type == "module"){
+                            context.fillStyle = "green";
+                        }
+                        else{
+                            context.fillStyle = "black";
+                        }
+
+                        context.fillText(message,x,y);
+
+                    }
+                    canvas_printer (10,20,"canvas_2","prompt",">>>");
+                    canvas_printer(36,20,"canvas_2","module","n = np.array([9,-10,23,0,-83,19,23,1, 34, 8,3,-3])")
+                  </script> 
+                   
+                </p>
+                <p class="text"> To sort the elements in the array we will use the sort () function present in the numpy module</p>
+                <p class="textbold">Synatx :- <b class="pyfunctions">np.sort(a,axis= , kind = , order=)</b></p>
+                <p>
+                     <canvas id="canvas_3" width="800" height="60" style="border:1px solid #ed4042"></canvas>
+                  <script type="text/javascript">
+                      var canvas_printer = function(x,y,elementID,type,message){
+                        var python_canvas = document.getElementById(elementID);
+                        var context = python_canvas.getContext("2d");
+                        context.font = "bold 16px Vollkorn";
+
+                        if (type == "prompt"){
+                            context.fillStyle = "black";
+                        }
+                        else if (type == "comment"){
+                            context.fillStyle = "blue"
+                        }
+                        else if (type == "module"){
+                            context.fillStyle = "green";
+                        }
+                        else{
+                            context.fillStyle = "black";
+                        }
+
+                        context.fillText(message,x,y);
+
+                    }
+                    canvas_printer (10,20,"canvas_3","prompt",">>>");
+                    canvas_printer(36,20,"canvas_3","module","np.sort(n,axis=0,kind='mergesort')");
+                    canvas_printer(10,40,"canvas_3","prompt",">>>");
+                    canvas_printer(36,40,"canvas_3","module","array([-83, -10,-3,0,1,3,8,9,19,23,  23,34])");
+                    canvas_printer(350,43,"canvas_3","comment","# sorted array ")
+                  </script> 
+                </p>
+                <p class="textbold">Available Kinds in the kind argument are
+                <ul>
+                    <li class="text">quicksort</li>
+                    <li class="text">mergesort</li>
+                    <li class="text">heapsort</li>
+                </ul>
+                </p>
+            </div>
+            
+        </div>
+        
+        <hr>
+        
+        <!--
+        <div class="container">
+            <p class="lead">pagination Example </p>
+        </div>
+        <div class="container">
+            <ul class="pagination">
+                <li><a href="#">&laquo;</a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li class="disable"><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">&raquo;</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <p class="lead">Pager Example</p>
+            <ul class="pager">
+                <li class="previous disabled"><a href="#">&larr;Older</a></li>
+                <li class="next"><a href="#">&rarr;Newer</a></li>
+            </ul>
+        </div>
+        -->
+        <div class="container">
+           
+            <ul class="pager">
+                <li class="previous disabled"><a href="#">&larr;Older</a></li>
+                <li class="next "><a href="platform.html">&rarr;Newer</a></li>
+            </ul>
+        </div>
+        <hr>
+        <!-- footer -->
+        <footer class="text-center">
+            <div class="footer-above">
+                <div class="container">
+                    <div class="row">
+                        <div class="footer-col col-md-4">
+                            <h3 class="headings"> Contact </h3>
+                            <p class="lead">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                inbox.dipayan@gmail.com
+                            </p>
+                            <p><i class="fa fa-mobile fa-2x" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;9748459031</p>
+                        </div>
+                        <div class="footer-col col-md-4">
+                        
+                        </div>
+                        <div class="footer-col col-md-4">
+                            <h3 class="headings">Web Presence</h3>
+                            <a href="https://github.com/dipayandutta"><i class="fa fa-github fa-3x padding icon" aria-hidden="true"></i></a>
+                            
+                            <a href="https://www.linkedin.com/in/dipayandutta"><i class="fa fa-linkedin-square fa-3x padding icon" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
