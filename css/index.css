@@ -59,7 +59,10 @@
 .checked{
 	color:#0275d8 ;
 }
-
+.white_link{
+    color: white;
+    
+}
 .profile_section{
 	display: block;
 	padding: 5px;
@@ -75,7 +78,7 @@
     font-size: 30px;
     
 }
-.tech_stack_heading{
+.text_cap{
     
     text-transform: uppercase;
 }
