@@ -20,7 +20,7 @@
 }
 
 .navbar-custom {
-    background-color: #2079d4;
+    background-color: #0275d8 ;
 }
 
 /* change the brand and text color */
@@ -52,32 +52,45 @@
     color: #333333;
     background-color: rgba(255,255,255,.5);
 }
-
+.font_roboto{
+    font-family: 'Roboto , sans-serief';
+    letter-spacing: normal;
+}
 .checked{
-	color: blue;
+	color:#0275d8 ;
 }
 
 .profile_section{
 	display: block;
-	padding: 10px;
-	margin-bottom: 50px;
+	padding: 5px;
+	margin-bottom: 5px;
 	text-align: justify;
 }
 
 .tech_stack{
 	display: block;
-	padding: 10px;
+	padding: 5px;
 	text-align: justify;
-	margin-top: 50px;
+    margin-top: 5px;
+    font-size: 30px;
+    
+}
+.tech_stack_heading{
+    
+    text-transform: uppercase;
 }
 .word_space{
 	word-spacing: .5em;
 }
-
-
-
-
-
+.icon_space{
+    padding-right: 10px;
+}
+.blue{
+    background-color:#0275d8 ;
+}
+.footer_text{
+    color: white;
+}
 .context-dark, .bg-gray-dark, .bg-primary {
     color: rgba(255, 255, 255, 0.8);
 }
@@ -114,11 +127,12 @@ ul, ol {
 }
 .social-container .col {
     border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
 }
 .nav-list li a:before {
     content: "\f14f";
     font: 400 21px/1 "Material Design Icons";
-    color: #4d6de6;
+    color: white;
     display: inline-block;
     vertical-align: baseline;
     margin-left: -28px;
