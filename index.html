@@ -1,217 +1,249 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-        <meta name="description" content="Example Project 3">
-        <meta name="author" content="Dipayan Dutta">
-        <title>Devopsian</title>
-        <script type="text/javascript" src="js/jquery-2.min.js"></script>
-        <script type="text/javascript" src="js/bootstrap.js"></script>
-        <link rel="stylesheet" href="css/bootstrap.css">
-        <link rel="stylesheet" href="index.css">
-        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Aref+Ruqaa|Arvo|Vollkorn" rel="stylesheet">
-       <link rel="stylesheet" href="font/css/font-awesome.css">
-    </head>
-    <body>
-       <div class="container">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="devops and Machine Learning">
+    <meta name="author" content="dipayandutta">
+    <title>Dipayan's Blog</title>
+   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/popper.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js'></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-        <nav class="navbar navbar-inverse navbar-fixed-top navbar-custom">
+    <!-- Fontawsome core CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-                <div class="navbar-header">
-                    <a class="navbar-brand headings"><i class="fa fa-linux fa-lg padding " aria-hidden="true"></i>root@world:~#_</a>
-                </div>
-                <div class="nav navbar-nav navbar-right ">
-                    <li class="selected"><a href="#" class="menufont">Who Am I</a></li>
+    <!-- Custom styles for this template -->
+  
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <!--Google Font-->
 
-                    <li><a href="linux/package_management.html" class="menufont">Linux</a></li>
-                    <li><a href="python/numpy.html" class="menufont">Python</a></li>
-                    <li><a href="projects/projects.html" class="menufont">applications</a></li>
-                </div>
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <!--NavBar Section-->
+     <div class="container">
+        <nav class="navbar navbar-expand-lg  navbar-custom">
+  <div class="collapse navbar-collapse font_roboto" id="navbarTogglerDemo01">
+    <a class="navbar-brand" href="#">#DevOps_daily</a>
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home </a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Django
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="django/basic/containts.html">Basic</a>
+          <a class="dropdown-item" href="django/intermediate/containts.html">Intermediate</a>
+          
+          <a class="dropdown-item" href="django/advance/containts.html">Advance</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Devops
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="devops/docker/containts.html">Docker</a>
+          <a class="dropdown-item" href="devops/ansible/containts.html">Ansible</a>
+          
+          <a class="dropdown-item" href="devops/jenkins/containts.html">Jenkins</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Linux
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="linux/random/containts.html">Random Topics</a>
+          <a class="dropdown-item" href="linux/server_hardening/containts.html">Server Hardening</a>
+         
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Python
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Paramiko</a>
+          <a class="dropdown-item" href="#">argparse</a>
+          <a class="dropdown-item" href="#">Numpy</a>
+          <a class="dropdown-item" href="#">Flask</a>
+          <a class="dropdown-item" href="#">Numpy</a>
+
+        </div>
+      </li>
+    </ul>
+    
+  </div>
+</nav>
+
+    </div>
+<!--End of NavBar Section-->      
+<!--Banner Section-->
+      <div class="container font_roboto">
+         <div class="jumbotron ">
+            <h1 class="display-4"></h1>
+            <p class="lead font_roboto">WHAT A COMPUTER IS TO ME IS THE MOST REMARKABLE TOOL THAT <br>WE HAVE EVER COME UP WITH.IT IS THE EQUIVALENT OF A BICYCLE <br>FOR OUR MIND.</p>
+            <h1 class="my-4">
+              <p class="lead"><b>Steve Jobs</b></p>
+           </h1>
+        </div>
+      </div>
+<!--End of Banner Section-->
+<!--profile Section-->
+      <div class="container profile_section">
+        
+        <div class="row">
+          <div class="col-sm-4">
+            <img  class="profile_image" src="DP_Profile.jpg">
+            <br>
+            <br>
+            <p class="font_roboto">Linux System Admin and Devops Engineer</p>
+            <p class="icon_space">
+              <a href="https://github.com/dipayandutta"><i class="fa fa-github fa-2x padding icon" aria-hidden="true"></i></a>
+              &nbsp; &nbsp;
+              <a href="https://www.linkedin.com/in/dipayandutta"><i class="fa fa-linkedin-square fa-2x padding icon" aria-hidden="true"></i></a>
+              &nbsp; &nbsp;
+            </p>
+           <!--
+            <p class="font_roboto">
+              reach me: inbox.dipaya@gmail.com
+            </p>
+          -->
             </div>
-        </nav>
-        <div class="clearspace"></div>
-        <div class="container">
-            <div class="jumbotron">
-
-                <h2 class="text jumbheading jmbtext"><i class="fa fa-quote-left"></i>what a computer is to me is the most remarkable tool that we have ever come up with. It is the equivalent of a bicycle for our mind<i class="fa fa-quote-right"></i></h2>
-                <div class="col-md-10"></div>
-                <div class="col-md-2">
-                    <p class="text lead">-Steve Jobs</p>
-                </div>
+          <div class="col-sm-8 font_roboto">
+            <p class="lead" align="justify">
+              This is Dipayan, Electronics and Instrumentation Engineer. I bagged REDHAT CERTIFIED ENGINEER (RHCE) ON RHEL-7. I am super passionate about how tech works, specially focusing on the DevOps and system administration. I love programming, prefer to develop system level applications and also web applications . I  have adequate knowledege in cloud technology and DevOps Stack. My fields of interest are Machine Learning , Network Secutiry .
+            </p>
+            <p class="lead" align="justify">
+              My aim is  to be a part of the challenging team, as an integral and important member. Which strives of the better growth of the organization and also which explore my potentials and provide me with the oppurtunity to enhance my skills with an itention to be an asset of the organisation.
+            </p>
+            
+          </div>
+        </div>
+      </div>
+     
+      <div class="container tech_stack font_roboto">
+        <div class="row">
+          <div class="col-sm-4">
+            <p class="lead ">
+              <b class="text_cap">Tech Stack</b>
+              <hr>
+            </p>
+            <p class="lead "> DevOps
+              <p class="word_space">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              </p>
+            </p>
+            <p class="lead word_space"> Django
+               <p class="word_space">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              </p>
+            </p>
+            <p class="lead word_space"> Linux Administration
+              <p class="word_space">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              </p>
+            </p>
+             <p class="lead word_space"> Python
+              <p class="word_space">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star "></span>
+              <span class="fa fa-star"></span>
+              </p>
+            </p>
            </div>
-        </div>
-        <hr>
-        <div class="container">
-            <p class="lead startfont text" >Hi , I am Dipayan, Electronics and Instrumentation Engineer and also , <b class="headings">Redhat Certified Engineer (RHCE) on RHEL-7</b>, i am super passonate about how tech works , specially focused on the security , integrity of the technologies.I am self taught computer programmer , prefer to develop system level application and also web application . I also have adequate knowledege in cloud technology such as <b class="textbold lead ">Amazon AWS and Redhat openstack</b>.  My Field of interest are  <b class="textbold">Machine Learning , Network Secutiry</b> .At the thresold of my carrier , i started working in a Ferro Alloys plant in the Electrical Dept as GET , After quiting from the job i taught myself computer programming and also  make a clear concept on OS .As a result of my hardwork i cleared , RHCE exam , have nearly 7 months exp as a linux system admin .I always wanted to be a part of the challenging team, as an integral and important member. Which strives of the better growth of the organization and also which explore my potentials and provide me with the oppurtunity to enhance my skills with an itention to be an asset of the organisation.</p>
-	<p class="lead startfont text"><a href="https://github.com/dipayandutta/">Check out Some of my OpenSource work in github ...</a></p>
-        </div>
-        <hr/>
-        <div class="container">
-            <div class="col-md-6">
-            <p class ="startfont"><b><u>Global Certifications</u></b></p>
-                <ul class="fa-ul">
-                    <li><i class="fa-li fa fa-check-square fa-lg red-square"></i><a href="docs/DIPAYAN_DUTTA_RHCE.pdf" class="text">REDHAT CERTIFIED ENGINEER(RHCE [RHEL-7])</a></li>
-                    <div class="clear"></div>
-                    <li><i class="fa-li fa fa-check-square red-square fa-lg"></i><a href="docs/Dipayan_Dutta_RHCSA.pdf" class="text">REDHAT CERTIFIED SYSTEM ADMNISTRATOR</a></li>
-                </ul>
+           <div class="col-sm-8">
+            <p class="lead font_roboto">
+                I deicated this blog for DevOps and System Administration
+                professionals. In this digital space i am going to share some of my
+                automation and Linux Administration knowledege which i aquired throughout my 
+                professional journery.Here you all going to experience a new dimension of
+                automation. 
+            </p>
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title font_roboto">Global Certification</h4>
+                <hr>
+                <p class="lead font_roboto">RHCE & RHCSA on RHEL-7 Certification Link</p>
+                <a href="docs/DIPAYAN_DUTTA_RHCE.pdf" class="lead font_roboto">RHCE</a>
+                <br>
+                <a href="docs/Dipayan_Dutta_RHCSA.pdf" class="lead font_roboto">RHCSA</a>
+              </div>
             </div>
+           </div>
+          </div>
         </div>
-        <hr>
-
-        <div class="clear"><hr></div>
-        <div class="container">
-            <p class="lead headings padding" text-align="center"><i class="fa fa-cog fa-spin"></i>&nbsp;&nbsp;<b><u>Tech Skills</u></b></p>
-            <div class="col-md-6">
-                <div class="col-md-10">
-                    <table class="table striped">
-                        <tbody>
-                            <th class="text">PYTHON</th>
-                            <th><span class="rating">&#9733;</span><span class="rating">&#9733;</span><span class="rating">&#9733;</span><span>&#9734;</span><span>&#9734;</span</th>
-                        </tbody>
-                        <tbody>
-                            <th class="text">SHELL SCRIPT</th>
-                            <th><span class="rating">&#9733;</span><span class="rating">&#9733;</span><span class="rating">&#9733;</span><span >&#9734;</span><span>&#9734;</span</th>
-                        </tbody>
-                        <tbody>
-                            <th class="text">JAVASCRIPT</th>
-                            <th><span class="rating">&#9733;</span><span class="rating">&#9733;</span><span class="rating">&#9733;</span><span class="rating">&#9733;</span><span>&#9734;</span</th>
-                        </tbody>
-                        <tbody>
-                            <th class="text">HTML5</th>
-                            <th><span class="rating">&#9733;</span><span class="rating">&#9733;</span><span class="rating">&#9733;</span><span class="rating">&#9733;</span><span>&#9734;</span</th>
-                        </tbody>
-                        <tbody>
-                            <th class="text">CSS</th>
-                            <th><span class="rating">&#9733;</span><span class="rating">&#9733;</span><span class="rating">&#9733;</span><span class="rating">&#9733;</span><span>&#9734;</span</th>
-                        </tbody>
-                        <tbody>
-                            <th class="text">PHP</th>
-                            <th><span class="rating">&#9733;</span><span class="rating">&#9733;</span><span class="rating">&#9733;</span><span >&#9734;</span><span>&#9734;</span</th>
-                        </tbody>
-                    </table>
-
-
+<!--End of Profile Section-->
+	<!--Card Section-->
+	<div class="container font_roboto">
+					<div class="row">
+						<div class="col-sm-4">
+							<div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+  							<div class="card-header"><a href="#" class="white_link text_cap">Django</a></div>
+  								<div class="card-body">
+    								<h5 class="card-title">Web Framework</h5>
+    									<p class="card-text">A Python Framework design to develop web apps first and secure way.</p>
+  								</div>	
+								</div>
+							</div> 
+              <div class="col-sm-4">
+                <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                 <div class="card-header"><a href="#" class="white_link text_cap">Docker</a></div>
+                  <div class="card-body">
+                    <h5 class="card-title">Contanarized App's</h5>
+                    <p class="card-text">Create containerized application and share. fastest way of setup.</p>
+                  </div>	
                 </div>
-            </div>
-
-            <div class="col-md-6">
-                <div class="col-md-6">
-                    <p class="techtextsub">linux</p>
-                    <p class="techtextsub">microsoft</p>
-                    <p class="techtextsub">machintosh</p>
-                </div>
-                <div class="col-md-6">
-                    <p><span class="rating">&#9733;</span><span class="rating">&#9733;</span><span class="rating">&#9733;</span><span class="rating">&#9733;</span><span>&#9734;</span></p>
-                    <p><span class="rating">&#9733;</span><span class="rating">&#9733;</span><span class=>&#9734;</span><span class>&#9734;</span><span>&#9734;</span></p>
-                    <p><span class="rating">&#9733;</span><span class>&#9734;</span><span class>&#9734;</span><span class>&#9734;</span><span>&#9734;</span></p>
-                </div>
-            </div>
-        </div>
-        <hr>
-        <div class="container">
-            <p class="techtextsub">linux distro's i am familer with</p>
-            <div class="col-md-4">
-                <p class="text">REDHAT ENTERPRISE LINUX-7</p>
-                <p class="text">REDHAT ENTERPRISE LINUX-6</p>
-                <p class="text">FEDORA &amp; CENTOS</p>
-                <p class="text">UBUNTU</p>
-                <p class="text">DEBIAN</p>
-            </div>
-            <div class="col-md-4">
-                <p><span class="rating">&#9733;</span><span class="rating">&#9733;</span><span class="rating">&#9733;</span><span class="rating">&#9733;</span><span>&#9734;</span></p>
-                <p><span class="rating">&#9733;</span><span class="rating">&#9733;</span><span class="rating">&#9733;</span><span class="rating">&#9733;</span><span>&#9734;</span></p>
-                <p><span class="rating">&#9733;</span><span class="rating">&#9733;</span><span class="rating">&#9733;</span><span class="rating">&#9733;</span><span>&#9734;</span></p>
-                <p><span class="rating">&#9733;</span><span class="rating">&#9733;</span><span class="rating">&#9733;</span><span class="rating">&#9733;</span><span class="rating">&#9733;</span></p>
-                <p><span class="rating">&#9733;</span><span class="rating">&#9733;</span><span class="rating">&#9733;</span><span class="rating">&#9733;</span><span>&#9734;</span></p>
-            </div>
-        </div>
-        <hr>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-10">
-                    <p class="headings"><b>in order to know my candideture please download and go through my</b>
-                    <a href="docs/DipayanDutta_RHCE.pdf"><b>RESUME</b></a>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <hr>
-        <div class="container">
-
-            <div class="row">
-                <div class="col-md-6">
-                    <p class="textbold">Blog Topics
-                    <ul>
-                        <li class="text"><a href="linux/package_management.html">YUM vs DNF and apt-get</a></li>
-                    </ul>
-                    <ul>
-                        <li class="text"><a href="linux/kernel.html">kernel under the hood</a></li>
-                    </ul>
-
-                    </p>
-                </div>
-                <div class="col-md-6">
-                    <ul>
-                        <li class="text"><a href="python/platform.html">python platform module</a></li>
-                    </ul>
-                    <ul>
-                        <li class="text"><a href="python/python.html">python math module</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <p class="lead">pagination Example </p>
-        </div>
-        <div class="container">
-            <ul class="pagination">
-                <li><a href="#">&laquo;</a></li>
-                <li class="active"><a href="#">1</a></li>
-                <li class="disable"><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">&raquo;</a></li>
-            </ul>
-        </div>
-        <div class="container">
-            <p class="lead">Pager Example</p>
-            <ul class="pager">
-                <li class="previous disabled"><a href="#">&larr;Older</a></li>
-                <li class="next"><a href="#">&rarr;Newer</a></li>
-            </ul>
-        </div>
-        -->
-        <hr>
-
-        <hr>
-        <!-- footer -->
-        <footer class="text-center">
-            <div class="footer-above">
-                <div class="container">
-                    <div class="row">
-                        <div class="footer-col col-md-4">
-                            <h3 class="headings"> Contact </h3>
-                            <p class="lead">
-                                <i class="fa fa-envelope" aria-hidden="true"></i>
-                                inbox.dipayan@gmail.com
-                            </p>
-                            <p><i class="fa fa-mobile fa-2x" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;9748459031</p>
+              </div> 
+              <div class="col-sm-4">
+                  <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                  <div class="card-header"><a href="#" class="white_link text_cap">Python</a></div>
+  								<div class="card-body">
+    								<h5 class="card-title">One Language for ALL</h5>
+    									<p class="card-text">Use python for developing web,cli,automation,network, security & other kind of app.</p>
+  								</div>	
+								</div>
+							</div> 
                         </div>
-                        <div class="footer-col col-md-4">
+          </div>
+<!--End of Card Section-->
+      <!--Footer-->
+          <footer>
+            <div class="container font_roboto">
+              <footer class="blue footer_text">
 
-                        </div>
-                        <div class="footer-col col-md-4">
-                            <h3 class="headings">Web Presence</h3>
-                            <a href="https://github.com/dipayandutta"><i class="fa fa-github fa-3x padding icon" aria-hidden="true"></i></a>
-
-                            <a href="https://www.linkedin.com/in/dipayandutta"><i class="fa fa-linkedin-square fa-3x padding icon" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                </div>
+              <p class="lead" style="text-align: center;padding-top: 10px;">
+                Experience a new way of Linux System Administration with Cloud and DevOps.
+              </p>
+              <p class="lead" style="text-align: center;padding-bottom: 10px;">
+                Powered By: Dipayan Dutta
+              </p>
+            </footer>
             </div>
-        </footer>
-    </body>
+          </footer>
+
+      <!--end footer-->
+      
+  </body>
 </html>
