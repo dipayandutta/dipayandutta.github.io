@@ -2,13 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=yes">
     <meta name="description" content="devops and Machine Learning">
     <meta name="author" content="dipayandutta">
     <title>Dipayan's Blog</title>
-   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/popper.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <!--
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/popper.min.js'></script> 
+    -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js'></script>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- Fontawsome core CSS -->
@@ -24,68 +27,71 @@
   </head>
 
   <body>
-     <div class="container">
-        <nav class="navbar navbar-expand-lg  navbar-custom">
-      
-  
-  <div class="collapse navbar-collapse font_roboto" id="navbarTogglerDemo01">
-    <a class="navbar-brand" href="#">#DevOps_daily</a>
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      <li class="nav-item active">
-        <a class="nav-link" href="http://devopsian.in/">Home </a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Django
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="../basic/containts.html">Basic</a>
-          <a class="dropdown-item" href="../intermediate/containts.html">Intermediate</a>
-          
-          <a class="dropdown-item" href="../advance/containts.html">Advance</a>
+    <!--NavBar Section-->
+      <div class="header">
+        <div class="top-header">
+          <div class="container">
+              <nav class="navbar navbar-expand-lg navbar-custom">
+                  <a class="navbar-brand" href="#">DevOpsian</a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon">
+                          <i class="fa fa-navicon"></i>
+                      </span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                          <li class="nav-item active">
+                            <a class="nav-link" href="#">Home </a>
+                          </li>
+                          <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Django
+                              </a>
+                              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="../basic/containts.html">Basic</a>
+                                <a class="dropdown-item" href="../intermediate/containts.html">Intermediate</a>
+                                <a class="dropdown-item" href="../advance/containts.html">Advance</a>
+                              </div>
+                          </li>
+                          <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Devops
+                              </a>
+                              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="../../devops/docker/containts.html">Docker</a>
+                                <a class="dropdown-item" href="../../devops/ansible/containts.html">Ansible</a>
+                                 <a class="dropdown-item" href="../../devops/jenkins/containts.html">Jenkins</a>
+                              </div>
+                            </li>
+                          <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Linux
+                              </a>
+                              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="../../linux/random/containts.html">Random Topics</a>
+                                <a class="dropdown-item" href="../../linux/server_hardening/containts.html">Server Hardening</a>
+                              </div>
+                            </li>
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Python
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="#">Paramiko</a>
+                              <a class="dropdown-item" href="#">argparse</a>
+                              <a class="dropdown-item" href="#">Numpy</a>
+                              <a class="dropdown-item" href="#">Flask</a>
+                              <a class="dropdown-item" href="#">Numpy</a>
+                            </div>
+                            </li>
+                          </ul>
+                  </div>
+              </nav>
+          </div>
         </div>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Devops
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="../../devops/docker/containts.html">Docker</a>
-          <a class="dropdown-item" href="../../devops/ansible/containts.html">Ansible</a>
-          
-          <a class="dropdown-item" href="../../devops/jenkins/">Jenkins</a>
-        </div>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Linux
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="../../linux/random/containts.html">Random Topics</a>
-          <a class="dropdown-item" href="../../linux/server_hardening/containts.html">Server Hardening</a>
-         
-        </div>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Python
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Paramiko</a>
-          <a class="dropdown-item" href="#">argparse</a>
-          <a class="dropdown-item" href="#">Numpy</a>
-          <a class="dropdown-item" href="#">Flask</a>
-          <a class="dropdown-item" href="#">Numpy</a>
-
-        </div>
-      </li>
-    </ul>
-    
-  </div>
-</nav>
-    </div>
-      
-
+      </div>
+    <!--End of NavBar Section-->      
+<!--Banner Section-->
       <div class="container font_roboto">
          <div class="jumbotron ">
             <h1 class="display-4"></h1>
@@ -95,8 +101,9 @@
            </h1>
         </div>
       </div>
+<!--End of Banner Section-->
 
-      
+<!--End of Card Section-->
       <!--Footer-->
           <footer>
             <div class="container font_roboto">
