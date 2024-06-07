@@ -37,8 +37,13 @@ body {
 }
 
 .displayName{
+  margin-top: 60px;
   font-size: 30px;
   text-decoration: underline;
+}
+
+.jobProfile{
+  margin-top: 15px;
 }
 .footer {
   position: absolute;

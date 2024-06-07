@@ -10,17 +10,12 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
         <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;family=Roboto:wght@300;400;500;700&amp;display=swap"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" media="print" onload="this.media='all'"/>
-        <link href="css/aos.css?ver=1.2.0" rel="stylesheet">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         
         <noscript>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;family=Roboto:wght@300;400;500;700&amp;display=swap"/>
         </noscript>
-        <style type="text/css">
-            [data-aos] {
-                opacity: 1 !important;
-                transform: translate(0) scale(1) !important;
-            }
-          </style>
+       
     </head>
     <body>
         <div class="page-content">
@@ -36,12 +31,12 @@
 
             <div class="container">
                 <div class="displayName">
-                    <p>Dipayan Dutta</p>
+                    <div data-aos="fade-right" >Dipayan Dutta</div>
                 </div>
             </div>
             <div class=" container">
                 <div class="jobProfile">
-                    <p>Linux System Administrator</p>
+                    <div data-aos="fade-left">Linux System Administrator</div>
                 </div>
             </div>
         </div>
@@ -51,6 +46,11 @@
         <div class="footer">
 
         </div>
-        <script src="js/aos.js?ver=1.2.0"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init({
+              easing: 'ease-in-out-sine'
+            });
+          </script>
     </body>
 </html>
